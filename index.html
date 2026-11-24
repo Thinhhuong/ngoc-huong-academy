@@ -87,7 +87,7 @@
   .step .num{flex:0 0 54px;height:54px;border-radius:14px;background:var(--primary);color:var(--highlight);display:grid;place-items:center;font-family:"Playfair Display",serif;font-weight:800;font-size:15px;text-align:center;line-height:1.1}
   .step h4{font-size:17px;margin-bottom:2px}
   .step p{color:var(--muted);font-size:15px}
-  .roadmap .section-title{text-align:left}
+  .roadmap .section-title{text-align:center}
 
   /* ====== LỢI ÍCH ====== */
   .benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
@@ -187,6 +187,10 @@
   .reveal{opacity:0;transform:translateY(26px);transition:.7s ease}
   .reveal.in{opacity:1;transform:none}
 
+  /* ====== LỘ TRÌNH & LỊCH ====== */
+  .steps-grid{grid-template-columns:repeat(2,1fr);gap:18px}
+  .pricing-2{grid-template-columns:repeat(2,1fr);max-width:860px;margin-inline:auto}
+
   /* ====== ẢNH HERO ====== */
   .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:inherit}
   .hero-visual{overflow:visible}
@@ -221,7 +225,7 @@
   /* ====== RESPONSIVE ====== */
   @media (max-width:1024px){
     .benefits{grid-template-columns:repeat(2,1fr)}
-    .pricing{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
+    .pricing,.pricing-2{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
     .testi{flex-basis:calc((100% - 22px)/2)}
     .logos{grid-template-columns:repeat(3,1fr)}
     .foot{grid-template-columns:1fr 1fr}
@@ -237,6 +241,7 @@
     .hero-visual{max-width:360px;margin:auto;width:100%}
     .hero-visual .badge{left:0}
     .roadmap .section-title{text-align:center}
+    .steps-grid{grid-template-columns:1fr}
     form{padding:32px}
     .signup-info{padding:36px 32px}
   }
@@ -260,8 +265,8 @@
     <a href="#" class="logo"><span class="logo-mark">NH</span>Ngọc Hương</a>
     <ul class="menu" id="menu">
       <li><a href="#" class="active">Trang chủ</a></li>
-      <li><a href="#gioi-thieu">Giới thiệu</a></li>
-      <li><a href="#khoa-hoc">Khoá học</a></li>
+      <li><a href="#lo-trinh">Lộ trình</a></li>
+      <li><a href="#khoa-hoc">Lịch học</a></li>
       <li><a href="#cam-nhan">Học viên</a></li>
       <li><a href="#lien-he">Liên hệ</a></li>
     </ul>
@@ -277,44 +282,40 @@
 <section class="hero">
   <div class="container">
     <div class="reveal">
-      <span class="eyebrow">🎙️ Học viện luyện giọng nói & thương hiệu cá nhân</span>
-      <h1>Giọng nói hay<br>mở ra <em>cơ hội mới</em></h1>
-      <p>Luyện phát âm, hơi thở và biểu cảm để tự tin giao tiếp, thuyết trình, bán hàng và xây dựng dấu ấn cá nhân của riêng bạn.</p>
+      <span class="eyebrow">🎙️ Khoá học luyện giọng nói · Khai giảng tháng 12</span>
+      <h1>Hiểu giọng,<br>hiểu mình,<br><em>nói tự tin</em></h1>
+      <p>Cải thiện giọng địa phương, phát âm rõ hơn và làm chủ một đoạn văn bản hoàn toàn mới, sau 10 buổi học cùng Ngọc Hương.</p>
       <div class="hero-ctas">
         <a href="#" class="btn btn-gold" data-open>ĐĂNG KÝ NGAY</a>
-        <a href="#khoa-hoc" class="btn btn-outline">Xem khoá học</a>
+        <a href="#lo-trinh" class="btn btn-outline">Xem lộ trình</a>
       </div>
       <div class="hero-stats">
-        <div><b>5.000+</b><span>Học viên</span></div>
-        <div><b>100+</b><span>Video bài giảng</span></div>
-        <div><b>4.9★</b><span>Đánh giá trung bình</span></div>
+        <div><b>10</b><span>Buổi học</span></div>
+        <div><b>90'</b><span>Mỗi buổi</span></div>
+        <div><b>10</b><span>Học viên / lớp</span></div>
       </div>
     </div>
     <div class="hero-visual reveal">
       <img src="images/ngoc-huong-hero.jpg" alt="Ngọc Hương – nhà sáng lập Ngọc Hương Academy" class="hero-img">
-      <div class="badge"><i>🏆</i><div><b>Lộ trình 30 ngày</b><br>Thấy thay đổi rõ rệt</div></div>
+      <div class="badge"><i>📅</i><div><b>Online 19:00 · 02/12</b><br>Offline 09:00 · 05/12</div></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== LỘ TRÌNH 30 NGÀY ===================== -->
-<section class="section roadmap" id="gioi-thieu">
-  <div class="container roadmap-grid">
-    <div class="reveal">
-      <div class="video ph" id="videoBox" title="Bấm để xem video">
-        <div class="play">▶</div>
-        <small>Video giới thiệu lộ trình</small>
-      </div>
-    </div>
-    <div class="reveal">
-      <h2 class="section-title">Lộ trình 30 ngày<br>luyện giọng nói</h2>
-      <p style="color:var(--muted);margin-bottom:24px">Mỗi ngày 20 phút, đi từ nền tảng đến biểu cảm, có người chữa bài cho bạn.</p>
-      <div class="steps">
-        <div class="step"><div class="num">1–7</div><div><h4>Hơi thở & phát âm</h4><p>Kiểm soát hơi, sửa ngọng, nói rõ từng chữ.</p></div></div>
-        <div class="step"><div class="num">8–15</div><div><h4>Âm sắc & nhịp điệu</h4><p>Làm giọng ấm, tròn, ngắt nghỉ đúng chỗ.</p></div></div>
-        <div class="step"><div class="num">16–23</div><div><h4>Biểu cảm & truyền cảm</h4><p>Kể chuyện, đọc thơ, nói chạm cảm xúc.</p></div></div>
-        <div class="step"><div class="num">24–30</div><div><h4>Ứng dụng thực tế</h4><p>Livestream, thuyết trình, bán hàng, quay video.</p></div></div>
-      </div>
+<!-- ===================== LỘ TRÌNH 10 BUỔI ===================== -->
+<section class="section roadmap" id="lo-trinh">
+  <div class="container">
+    <h2 class="section-title reveal">Lộ trình 10 buổi</h2>
+    <p class="section-sub reveal">90 phút mỗi buổi, tối đa 10 học viên một lớp để giảng viên chữa giọng cho từng người.</p>
+    <div class="steps steps-grid">
+      <div class="step reveal"><div class="num">1</div><div><h4>Khai giảng & khám giọng</h4><p>Nghe và phân tích giọng nói hiện tại của từng học viên.</p></div></div>
+      <div class="step reveal"><div class="num">2–3</div><div><h4>Phát âm tiếng Việt</h4><p>Sửa giọng địa phương, nói rõ từng chữ.</p></div></div>
+      <div class="step reveal"><div class="num">4</div><div><h4>Hơi thở</h4><p>Làm chủ cột hơi để giọng vững và không hụt hơi.</p></div></div>
+      <div class="step reveal"><div class="num">5–6</div><div><h4>Kỹ thuật nói hay</h4><p>Ngắt nghỉ, nhấn nhá, nhịp điệu khi nói.</p></div></div>
+      <div class="step reveal"><div class="num">7</div><div><h4>Biểu cảm giọng nói</h4><p>Điều phối cảm xúc để lời nói chạm đến người nghe.</p></div></div>
+      <div class="step reveal"><div class="num">8</div><div><h4>Bài đọc hỗn hợp</h4><p>Kết hợp mọi kỹ thuật trên nhiều dạng văn bản.</p></div></div>
+      <div class="step reveal"><div class="num">9</div><div><h4>Bài tập cuối khoá</h4><p>Chuẩn bị và luyện tập bài thể hiện của riêng bạn.</p></div></div>
+      <div class="step reveal"><div class="num">10</div><div><h4>Bài tập cuối khoá & tổng kết</h4><p>Thể hiện một đoạn văn bản hoàn toàn mới, nhận góp ý.</p></div></div>
     </div>
   </div>
 </section>
@@ -341,67 +342,55 @@
   </div>
 </section>
 
-<!-- ===================== LỢI ÍCH ===================== -->
-<section class="section">
+<!-- ===================== GIÁ TRỊ CỐT LÕI ===================== -->
+<section class="section" id="gioi-thieu">
   <div class="container">
-    <h2 class="section-title reveal">Khoá học giúp gì cho bạn</h2>
-    <p class="section-sub reveal">Không chỉ là nói hay, mà là nói để được lắng nghe, tin tưởng và ghi nhớ.</p>
+    <h2 class="section-title reveal">Giá trị cốt lõi của khoá học</h2>
+    <p class="section-sub reveal">Mục tiêu: hiểu giọng, hiểu mình để tự tin truyền tải thông điệp của bản thân.</p>
     <div class="benefits">
-      <div class="benefit reveal"><div class="ico">💼</div><h3>Giọng nói trong kinh doanh</h3><p>Dùng giọng nói làm công cụ bán hàng, đàm phán và xây dựng quan hệ.</p></div>
-      <div class="benefit reveal"><div class="ico">📖</div><h3>Yêu tiếng Việt hơn</h3><p>Diễn đạt mạch lạc, đọc thơ, kể chuyện truyền cảm bằng tiếng mẹ đẻ.</p></div>
-      <div class="benefit reveal"><div class="ico">✨</div><h3>Phong thái tự tin</h3><p>Xây dựng thương hiệu cá nhân bền vững từ cách nói và cách thể hiện.</p></div>
-      <div class="benefit reveal"><div class="ico">🤝</div><h3>Cộng đồng gắn kết</h3><p>Học cùng hàng nghìn người, được chữa bài và hỗ trợ lâu dài.</p></div>
+      <div class="benefit reveal"><div class="ico">🗣️</div><h3>Phát âm rõ chữ</h3><p>Làm chủ cột hơi và khẩu hình để giọng nói sáng rõ, dễ nghe mà vẫn giữ trọn sự tự nhiên.</p></div>
+      <div class="benefit reveal"><div class="ico">🎭</div><h3>Diễn đạt & biểu cảm</h3><p>Ngắt nghỉ, nhấn nhá và điều phối cảm xúc để thông điệp có chiều sâu, lôi cuốn và chạm đến người nghe.</p></div>
+      <div class="benefit reveal"><div class="ico">✒️</div><h3>Dấu ấn giọng nói riêng</h3><p>Khai phá chất giọng bản sắc, biến giọng nói thành một "chữ ký cá nhân" tự tin.</p></div>
+      <div class="benefit reveal"><div class="ico">📜</div><h3>Làm chủ văn bản mới</h3><p>Cầm một đoạn văn bản chưa từng đọc và thể hiện trôi chảy, truyền cảm ngay lần đầu.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== KHOÁ HỌC ===================== -->
+<!-- ===================== LỊCH KHAI GIẢNG ===================== -->
 <section class="section courses" id="khoa-hoc">
   <div class="container">
-    <h2 class="section-title reveal">Khoá học tại Ngọc Hương</h2>
-    <p class="section-sub reveal">Chọn lộ trình phù hợp với mục tiêu của bạn.</p>
-    <div class="pricing">
-      <div class="card reveal">
-        <span class="type">Online · Video</span>
-        <h3>Nói Hay Cơ Bản</h3>
-        <div class="price">1.490.000đ</div>
-        <p class="desc">Khoá ghi hình sẵn, đăng ký và vào học ngay sau 1 phút.</p>
-        <ul>
-          <li>100+ video luyện giọng & kỹ thuật</li>
-          <li>Học mọi lúc trên điện thoại, máy tính</li>
-          <li>Tham gia cộng đồng chữa bài 1 năm</li>
-          <li>Tài liệu bài tập mỗi ngày</li>
-        </ul>
-        <a href="#" class="btn btn-outline" data-open data-course="Nói Hay Cơ Bản">Đăng ký</a>
-      </div>
+    <h2 class="section-title reveal">Lịch khai giảng</h2>
+    <p class="section-sub reveal">Cùng một lộ trình 10 buổi, chọn hình thức học phù hợp với bạn.</p>
+    <div class="pricing pricing-2">
       <div class="card featured reveal">
-        <span class="tag">⭐ Phổ biến nhất</span>
-        <span class="type">Online · Có hướng dẫn</span>
-        <h3>Làm Chủ Giọng Nói</h3>
-        <div class="price">4.990.000đ</div>
-        <p class="desc">Rèn luyện toàn diện từ phát âm, hơi thở đến biểu cảm, có giảng viên kèm.</p>
+        <span class="tag">Khai giảng sớm nhất</span>
+        <span class="type">Lớp Online</span>
+        <h3>Học qua Zoom</h3>
+        <div class="price">19:00 <small>· 02/12</small></div>
+        <p class="desc">Học trực tuyến từ bất cứ đâu, vẫn được chữa giọng trực tiếp.</p>
         <ul>
-          <li>Phát âm chuẩn & kiểm soát hơi thở</li>
-          <li>Kỹ thuật nói hay, giàu biểu cảm</li>
-          <li>Xây dựng "thanh âm thương hiệu" riêng</li>
-          <li>Thu âm, quay video và được chỉnh sửa trực tiếp</li>
+          <li>10 buổi · 90 phút/buổi</li>
+          <li>Tối đa 10 học viên</li>
+          <li>Khám giọng & góp ý từng người</li>
+          <li>Bài tập cuối khoá với văn bản mới</li>
         </ul>
-        <a href="#" class="btn btn-primary" data-open data-course="Làm Chủ Giọng Nói">Xem chi tiết</a>
+        <a href="#" class="btn btn-primary" data-open data-course="Lớp Online – 19:00 02/12">Giữ chỗ lớp Online</a>
       </div>
       <div class="card reveal">
-        <span class="type">Coaching 1:1</span>
-        <h3>Elite Mentor</h3>
-        <div class="price">Liên hệ <small>/ chương trình</small></div>
-        <p class="desc">Huấn luyện chuyên sâu cá nhân hoá cho người muốn bứt phá.</p>
+        <span class="type">Lớp Offline</span>
+        <h3>Học trực tiếp</h3>
+        <div class="price">09:00 <small>· 05/12</small></div>
+        <p class="desc">Luyện tập cùng giảng viên và bạn học tại lớp.</p>
         <ul>
-          <li>Kèm 1:1 cùng giảng viên chính</li>
-          <li>Lộ trình thiết kế riêng</li>
-          <li>Chiến lược thương hiệu cá nhân</li>
-          <li>Hỗ trợ ưu tiên không giới hạn</li>
+          <li>10 buổi · 90 phút/buổi</li>
+          <li>Tối đa 10 học viên</li>
+          <li>Chỉnh khẩu hình, hơi thở tại chỗ</li>
+          <li>Bài tập cuối khoá với văn bản mới</li>
         </ul>
-        <a href="#" class="btn btn-outline" data-open data-course="Elite Mentor">Đăng ký tư vấn</a>
+        <a href="#" class="btn btn-outline" data-open data-course="Lớp Offline – 09:00 05/12">Giữ chỗ lớp Offline</a>
       </div>
     </div>
+    <p class="section-sub reveal" style="margin:32px auto 0">Học phí và địa điểm lớp Offline: [cập nhật] · Liên hệ để được tư vấn.</p>
   </div>
 </section>
 
@@ -418,7 +407,7 @@
 <section class="section" id="cam-nhan">
   <div class="container">
     <h2 class="section-title reveal">Cảm nhận từ học viên</h2>
-    <p class="section-sub reveal">Hơn 5.000 học viên đã thay đổi cách nói và cách thể hiện bản thân.</p>
+    <p class="section-sub reveal">Chia sẻ của học viên sau khoá học. [Nội dung mẫu – thay bằng cảm nhận thật]</p>
     <div class="slider">
       <div class="track" id="track">
         <div class="testi"><div class="stars">★★★★★</div><p>“Sau 3 tuần mình hết nói nhanh, khách hàng nghe điện thoại cũng khen giọng dễ nghe hơn hẳn.”</p><div class="who"><div class="avatar">LA</div><div><b>Lan Anh</b><span>Nhân viên kinh doanh</span></div></div></div>
@@ -482,7 +471,7 @@
         <label>Họ và tên<input required name="name" placeholder="Nguyễn Văn A"></label>
         <label>Số điện thoại<input required name="phone" type="tel" pattern="[0-9 +]{9,13}" placeholder="09xx xxx xxx"></label>
         <label>Khoá học quan tâm
-          <select name="course"><option>Nói Hay Cơ Bản</option><option>Làm Chủ Giọng Nói</option><option>Elite Mentor</option><option>Chưa chắc, cần tư vấn</option></select>
+          <select name="course"><option>Lớp Online – 19:00 02/12</option><option>Lớp Offline – 09:00 05/12</option><option>Chưa chắc, cần tư vấn</option></select>
         </label>
         <label>Lời nhắn<textarea name="note" rows="3" placeholder="Mục tiêu của bạn là gì?"></textarea></label>
         <button class="btn btn-primary" type="submit">Gửi đăng ký</button>
@@ -501,7 +490,7 @@
       <p>Học viện luyện giọng nói và xây dựng thương hiệu cá nhân.</p>
       <div class="socials"><a href="https://www.facebook.com/huongvo01" target="_blank" rel="noopener" aria-label="Facebook">FB</a><a href="#">YT</a><a href="#">TT</a><a href="#">ZL</a></div>
     </div>
-    <div><h4>Khoá học</h4><ul><li><a href="#khoa-hoc">Nói Hay Cơ Bản</a></li><li><a href="#khoa-hoc">Làm Chủ Giọng Nói</a></li><li><a href="#khoa-hoc">Elite Mentor</a></li><li><a href="#khoa-hoc">Mentor 1:1</a></li></ul></div>
+    <div><h4>Khoá học</h4><ul><li><a href="#lo-trinh">Lộ trình 10 buổi</a></li><li><a href="#khoa-hoc">Lớp Online</a></li><li><a href="#khoa-hoc">Lớp Offline</a></li></ul></div>
     <div><h4>Tài nguyên</h4><ul><li><a href="https://www.facebook.com/huongvo01" target="_blank" rel="noopener">Kiến thức giọng nói</a></li><li><a href="#">Quà tặng</a></li><li><a href="#">Câu hỏi thường gặp</a></li><li><a href="#">Chương trình Affiliate</a></li></ul></div>
     <div><h4>Liên hệ</h4><ul><li>📍 [Địa chỉ]</li><li>📞 [Số điện thoại]</li><li>✉️ [Email]</li></ul></div>
   </div>
@@ -581,10 +570,6 @@
     }finally{btn.disabled=false;btn.textContent=label;}
   }));
 
-  // Video (thay link YouTube của bạn)
-  document.getElementById('videoBox').onclick=function(){
-    this.innerHTML='<iframe width="100%" height="100%" style="border:0;position:absolute;inset:0" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
-  };
 
   // Hiệu ứng xuất hiện khi cuộn
   const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
