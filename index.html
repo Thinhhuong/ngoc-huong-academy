@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ngọc Hương Academy – Luyện giọng nói & thương hiệu cá nhân</title>
+<meta name="description" content="Khoá học luyện giọng nói hay, giao tiếp tự tin và xây dựng thương hiệu cá nhân.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ====== ĐỔI MÀU THƯƠNG HIỆU TẠI ĐÂY ====== */
+  :root{
+    --primary:#7d1d1a;      /* đỏ đô */
+    --primary-dark:#5c1412;
+    --secondary:#a47965;    /* nâu be */
+    --cream:#efe8df;        /* nền be */
+    --paper:#fffdfa;
+    --highlight:#ffd93b;    /* vàng nhấn */
+    --ink:#161210;
+    --muted:#5e5550;
+    --radius:18px;
+    --shadow:0 12px 34px rgba(60,20,15,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Quicksand",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:16px}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .container{width:min(1180px,100% - 32px);margin-inline:auto}
+  .display{font-family:"Playfair Display",Georgia,serif;letter-spacing:.3px}
+  .section{padding:88px 0}
+  .section-title{font-family:"Playfair Display",Georgia,serif;font-size:clamp(26px,4vw,40px);color:var(--primary);text-align:center;line-height:1.25;margin-bottom:14px;text-transform:uppercase}
+  .section-sub{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 48px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 30px;border-radius:999px;font-weight:700;letter-spacing:.5px;cursor:pointer;border:2px solid transparent;transition:.25s;font-family:inherit;font-size:15px}
+  .btn-primary{background:var(--primary);color:#fff}
+  .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px)}
+  .btn-gold{background:var(--highlight);color:var(--ink)}
+  .btn-gold:hover{filter:brightness(.95);transform:translateY(-2px)}
+  .btn-outline{border-color:var(--primary);color:var(--primary);background:transparent}
+  .btn-outline:hover{background:var(--primary);color:#fff}
+
+  /* ====== HEADER ====== */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,253,250,.94);backdrop-filter:blur(8px);border-bottom:1px solid #eadfd5}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:"Playfair Display",serif;font-weight:800;font-size:22px;color:var(--primary)}
+  .logo-mark{width:42px;height:42px;border-radius:50%;background:var(--primary);color:var(--highlight);display:grid;place-items:center;font-size:16px;letter-spacing:.5px}
+  .menu{display:flex;gap:30px;list-style:none;font-weight:600}
+  .menu a{position:relative;padding:6px 0}
+  .menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--primary);transition:.25s}
+  .menu a:hover::after,.menu a.active::after{width:100%}
+  .nav-actions{display:flex;gap:10px;align-items:center}
+  .nav-actions .btn{padding:10px 20px;font-size:14px}
+  .burger{display:none;background:none;border:0;font-size:28px;color:var(--primary);cursor:pointer}
+
+  /* ====== HERO ====== */
+  .hero{background:
+      radial-gradient(circle at 85% 20%,rgba(255,217,59,.25),transparent 40%),
+      linear-gradient(135deg,var(--primary) 0%,#4a0f0d 100%);color:#fff;overflow:hidden}
+  .hero .container{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;min-height:600px;padding:60px 0}
+  .eyebrow{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:6px 16px;border-radius:999px;font-size:14px;margin-bottom:22px}
+  .hero h1{font-family:"Playfair Display",serif;font-size:clamp(40px,6vw,72px);line-height:1.08;margin-bottom:20px}
+  .hero h1 em{color:var(--highlight);font-style:italic}
+  .hero p{font-size:18px;opacity:.9;max-width:520px;margin-bottom:34px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-ctas .btn-outline{border-color:#fff;color:#fff}
+  .hero-ctas .btn-outline:hover{background:#fff;color:var(--primary)}
+  .hero-stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+  .hero-stats b{display:block;font-family:"Playfair Display",serif;font-size:34px;color:var(--highlight)}
+  .hero-stats span{font-size:14px;opacity:.85}
+  .hero-visual{position:relative;aspect-ratio:4/5;border-radius:220px 220px 24px 24px;background:linear-gradient(160deg,#c49a85,#8a5a48);box-shadow:0 30px 60px rgba(0,0,0,.35);display:grid;place-items:center;text-align:center;color:rgba(255,255,255,.85);font-weight:600}
+  .hero-visual .badge{position:absolute;left:-24px;bottom:40px;background:#fff;color:var(--ink);padding:14px 18px;border-radius:16px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center;font-size:14px;text-align:left}
+  .hero-visual .badge i{font-style:normal;font-size:26px}
+
+  /* placeholder ảnh */
+  .ph{background:repeating-linear-gradient(45deg,rgba(255,255,255,.08) 0 12px,transparent 12px 24px)}
+
+  /* ====== ROADMAP 30 NGÀY ====== */
+  .roadmap{background:var(--cream)}
+  .roadmap-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .video{position:relative;aspect-ratio:16/9;border-radius:var(--radius);background:linear-gradient(135deg,#3a1715,#7d1d1a);overflow:hidden;box-shadow:var(--shadow);display:grid;place-items:center;cursor:pointer}
+  .video .play{width:84px;height:84px;border-radius:50%;background:var(--highlight);display:grid;place-items:center;font-size:30px;color:var(--primary);box-shadow:0 0 0 14px rgba(255,217,59,.25);transition:.3s}
+  .video:hover .play{transform:scale(1.08)}
+  .video small{position:absolute;bottom:14px;left:18px;color:#fff;opacity:.8}
+  .steps{display:grid;gap:16px}
+  .step{display:flex;gap:18px;background:#fff;padding:20px 22px;border-radius:16px;box-shadow:0 4px 14px rgba(60,20,15,.06)}
+  .step .num{flex:0 0 54px;height:54px;border-radius:14px;background:var(--primary);color:var(--highlight);display:grid;place-items:center;font-family:"Playfair Display",serif;font-weight:800;font-size:15px;text-align:center;line-height:1.1}
+  .step h4{font-size:17px;margin-bottom:2px}
+  .step p{color:var(--muted);font-size:15px}
+  .roadmap .section-title{text-align:left}
+
+  /* ====== LỢI ÍCH ====== */
+  .benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .benefit{background:#fff;border:1px solid #eee3d9;border-radius:var(--radius);padding:32px 24px;transition:.3s;position:relative;overflow:hidden}
+  .benefit::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--primary),var(--secondary))}
+  .benefit:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .benefit .ico{width:60px;height:60px;border-radius:50%;background:var(--cream);display:grid;place-items:center;font-size:28px;margin-bottom:18px}
+  .benefit h3{font-size:18px;color:var(--primary);margin-bottom:8px}
+  .benefit p{color:var(--muted);font-size:15px}
+
+  /* ====== KHOÁ HỌC / BẢNG GIÁ ====== */
+  .courses{background:linear-gradient(180deg,var(--paper),var(--cream))}
+  .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch}
+  .card{background:#fff;border-radius:24px;padding:34px 28px;box-shadow:var(--shadow);display:flex;flex-direction:column;position:relative;border:2px solid transparent;transition:.3s}
+  .card:hover{transform:translateY(-6px)}
+  .card.featured{border-color:var(--primary);background:linear-gradient(180deg,#fff,#fff7f0)}
+  .card .tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--highlight);color:var(--ink);font-weight:700;font-size:13px;padding:5px 16px;border-radius:999px;white-space:nowrap}
+  .card .type{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--secondary);font-weight:700}
+  .card h3{font-family:"Playfair Display",serif;font-size:24px;color:var(--primary);margin:8px 0 12px;line-height:1.25}
+  .price{font-family:"Playfair Display",serif;font-size:38px;font-weight:800;color:var(--ink);margin-bottom:6px}
+  .price small{font-family:"Quicksand";font-size:15px;color:var(--muted);font-weight:500}
+  .card .desc{color:var(--muted);font-size:15px;margin-bottom:18px}
+  .card ul{list-style:none;display:grid;gap:10px;margin-bottom:28px;flex:1}
+  .card li{display:flex;gap:10px;font-size:15px}
+  .card li::before{content:"✓";flex:0 0 22px;height:22px;border-radius:50%;background:var(--cream);color:var(--primary);display:grid;place-items:center;font-weight:700;font-size:12px;margin-top:1px}
+  .card .btn{width:100%}
+
+  /* ====== CỘNG ĐỒNG ====== */
+  .community{background:var(--primary);color:#fff;text-align:center;position:relative;overflow:hidden}
+  .community::before,.community::after{content:"❝";position:absolute;font-family:"Playfair Display";font-size:260px;opacity:.07;line-height:1}
+  .community::before{left:4%;top:-30px}.community::after{content:"❞";right:4%;bottom:-120px}
+  .community h2{font-family:"Playfair Display",serif;font-size:clamp(30px,5vw,54px);font-style:italic;margin-bottom:14px}
+  .community p{opacity:.88;max-width:620px;margin:0 auto 30px}
+
+  /* ====== CẢM NHẬN ====== */
+  .slider{position:relative}
+  .track{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:8px 4px 24px;scrollbar-width:none}
+  .track::-webkit-scrollbar{display:none}
+  .testi{flex:0 0 calc((100% - 44px)/3);scroll-snap-align:start;background:#fff;border-radius:var(--radius);padding:28px;box-shadow:0 6px 20px rgba(60,20,15,.08);border:1px solid #f0e6dc}
+  .stars{color:#e6a800;letter-spacing:2px;margin-bottom:12px}
+  .testi p{color:var(--muted);font-size:15px;margin-bottom:20px;font-style:italic}
+  .who{display:flex;gap:12px;align-items:center}
+  .avatar{width:48px;height:48px;border-radius:50%;background:var(--secondary);color:#fff;display:grid;place-items:center;font-weight:700}
+  .who b{display:block}.who span{font-size:13px;color:var(--muted)}
+  .slider-btns{display:flex;justify-content:center;gap:12px}
+  .slider-btns button{width:46px;height:46px;border-radius:50%;border:2px solid var(--primary);background:#fff;color:var(--primary);font-size:18px;cursor:pointer;transition:.2s}
+  .slider-btns button:hover{background:var(--primary);color:#fff}
+
+  /* ====== ĐỐI TÁC ====== */
+  .partners{background:var(--cream);padding:64px 0}
+  .logos{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+  .logos div{height:80px;background:#fff;border-radius:14px;display:grid;place-items:center;font-weight:700;color:#b6a79c;letter-spacing:1px;filter:grayscale(1);transition:.3s}
+  .logos div:hover{color:var(--primary);filter:none;box-shadow:var(--shadow)}
+
+  /* ====== ĐĂNG KÝ ====== */
+  .signup{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:#fff;border-radius:28px;box-shadow:var(--shadow);overflow:hidden}
+  .signup-info{background:linear-gradient(150deg,var(--primary),#4a0f0d);color:#fff;padding:48px}
+  .signup-info h2{font-family:"Playfair Display",serif;font-size:34px;margin-bottom:14px}
+  .signup-info ul{list-style:none;margin-top:24px;display:grid;gap:12px}
+  form{padding:48px 48px 48px 8px;display:grid;gap:14px}
+  label{font-weight:600;font-size:14px}
+  input,select,textarea{width:100%;padding:13px 16px;border:1.5px solid #e4d8cd;border-radius:12px;font-family:inherit;font-size:15px;background:var(--paper);margin-top:6px}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--primary)}
+  .form-ok{display:none;background:#e9f7ee;color:#17663a;padding:14px;border-radius:12px;font-weight:600}
+
+  /* ====== FOOTER ====== */
+  footer{background:#1a1010;color:#d8cbc2;padding:70px 0 0}
+  .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+  footer h4{color:#fff;font-size:17px;margin-bottom:16px}
+  footer ul{list-style:none;display:grid;gap:10px;font-size:15px}
+  footer a:hover{color:var(--highlight)}
+  .foot .logo{color:#fff;margin-bottom:14px}
+  .socials{display:flex;gap:10px;margin-top:18px}
+  .socials a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;font-weight:700;font-size:13px}
+  .socials a:hover{background:var(--primary);color:#fff}
+  .copy{border-top:1px solid rgba(255,255,255,.1);margin-top:50px;padding:22px 0;text-align:center;font-size:14px;opacity:.7}
+
+  /* ====== NÚT NỔI ====== */
+  .floating{position:fixed;right:18px;bottom:18px;display:grid;gap:12px;z-index:60}
+  .floating a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:13px;box-shadow:0 8px 20px rgba(0,0,0,.25);transition:.2s}
+  .floating a:hover{transform:scale(1.08)}
+  .f-zalo{background:#0068ff}.f-mess{background:linear-gradient(45deg,#0099ff,#a033ff)}
+  .f-phone{background:#18a94b;animation:ring 1.6s infinite}
+  @keyframes ring{0%{box-shadow:0 0 0 0 rgba(24,169,75,.6)}70%{box-shadow:0 0 0 16px rgba(24,169,75,0)}100%{box-shadow:0 0 0 0 rgba(24,169,75,0)}}
+
+  /* ====== MODAL ====== */
+  .modal{position:fixed;inset:0;background:rgba(20,10,8,.6);display:none;place-items:center;z-index:100;padding:16px}
+  .modal.open{display:grid}
+  .modal-box{background:#fff;border-radius:22px;max-width:460px;width:100%;position:relative}
+  .modal-box form{padding:36px}
+  .modal-box h3{font-family:"Playfair Display",serif;color:var(--primary);font-size:26px}
+  .close{position:absolute;top:12px;right:16px;background:none;border:0;font-size:28px;cursor:pointer;color:var(--muted)}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:.7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ====== ẢNH HERO ====== */
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:inherit}
+  .hero-visual{overflow:visible}
+
+  /* ====== VỀ GIẢNG VIÊN ====== */
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+  .about{overflow:hidden}
+  .about-photo{position:relative;isolation:isolate}
+  .about-photo img{border-radius:24px;aspect-ratio:3/4;object-fit:cover;width:100%;box-shadow:var(--shadow)}
+  .about-photo::before{content:"";position:absolute;inset:22px -22px -22px 22px;border:2px solid var(--secondary);border-radius:24px;z-index:-1}
+  .about-handle{position:absolute;bottom:18px;left:18px;background:rgba(255,255,255,.92);color:var(--primary);font-weight:700;padding:8px 16px;border-radius:999px}
+  .type-label{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--secondary);font-weight:700}
+  .about .lead{font-family:"Playfair Display",serif;font-style:italic;font-size:21px;color:var(--primary);margin:6px 0 16px;line-height:1.45}
+  .about p{color:var(--muted);margin-bottom:16px}
+  .about-list{list-style:none;display:grid;gap:10px;margin:8px 0 28px}
+  .about-list li{display:flex;gap:10px}
+  .about-list li::before{content:"✦";color:var(--primary)}
+
+  /* ====== KIẾN THỨC ====== */
+  .blog{background:var(--cream)}
+  .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .post{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 20px rgba(60,20,15,.08);display:flex;flex-direction:column;transition:.3s}
+  .post:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .post img{aspect-ratio:4/5;object-fit:cover;width:100%}
+  .post>div{padding:20px 22px 24px}
+  .post h3{font-size:18px;margin:6px 0 10px;line-height:1.35}
+  .post .more{color:var(--primary);font-weight:700;font-size:14px}
+  .post-cta{background:linear-gradient(150deg,var(--primary),#4a0f0d);color:#fff;justify-content:center;text-align:center}
+  .post-cta p{opacity:.85;margin-bottom:22px;font-size:15px}
+  .post-cta h3{font-family:"Playfair Display",serif;font-size:26px}
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width:1024px){
+    .benefits{grid-template-columns:repeat(2,1fr)}
+    .pricing{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
+    .testi{flex-basis:calc((100% - 22px)/2)}
+    .logos{grid-template-columns:repeat(3,1fr)}
+    .foot{grid-template-columns:1fr 1fr}
+    .posts{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:860px){
+    .menu,.nav-actions .btn-outline{display:none}
+    .burger{display:block}
+    .menu.open{display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:var(--paper);padding:20px 24px;gap:16px;border-bottom:1px solid #eadfd5;box-shadow:var(--shadow)}
+    .hero .container,.roadmap-grid,.signup,.about-grid{grid-template-columns:1fr}
+    .about-photo{max-width:420px;margin:0 auto 12px}
+    .hero .container{min-height:auto;padding:56px 0}
+    .hero-visual{max-width:360px;margin:auto;width:100%}
+    .hero-visual .badge{left:0}
+    .roadmap .section-title{text-align:center}
+    form{padding:32px}
+    .signup-info{padding:36px 32px}
+  }
+  @media (max-width:560px){
+    .section{padding:64px 0}
+    .benefits{grid-template-columns:1fr}
+    .testi{flex-basis:88%}
+    .logos{grid-template-columns:repeat(2,1fr)}
+    .foot{grid-template-columns:1fr}
+    .posts{grid-template-columns:1fr}
+    .nav-actions .btn-primary{padding:9px 14px;font-size:13px}
+    .hero-stats{gap:22px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="container nav">
+    <a href="#" class="logo"><span class="logo-mark">NH</span>Ngọc Hương</a>
+    <ul class="menu" id="menu">
+      <li><a href="#" class="active">Trang chủ</a></li>
+      <li><a href="#gioi-thieu">Giới thiệu</a></li>
+      <li><a href="#khoa-hoc">Khoá học</a></li>
+      <li><a href="#cam-nhan">Học viên</a></li>
+      <li><a href="#lien-he">Liên hệ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="btn btn-outline">Đăng nhập</a>
+      <a href="#" class="btn btn-primary" data-open>Đăng ký học</a>
+      <button class="burger" id="burger" aria-label="Mở menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">🎙️ Học viện luyện giọng nói & thương hiệu cá nhân</span>
+      <h1>Giọng nói hay<br>mở ra <em>cơ hội mới</em></h1>
+      <p>Luyện phát âm, hơi thở và biểu cảm để tự tin giao tiếp, thuyết trình, bán hàng và xây dựng dấu ấn cá nhân của riêng bạn.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn btn-gold" data-open>ĐĂNG KÝ NGAY</a>
+        <a href="#khoa-hoc" class="btn btn-outline">Xem khoá học</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>5.000+</b><span>Học viên</span></div>
+        <div><b>100+</b><span>Video bài giảng</span></div>
+        <div><b>4.9★</b><span>Đánh giá trung bình</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <img src="images/ngoc-huong-hero.jpg" alt="Ngọc Hương – nhà sáng lập Ngọc Hương Academy" class="hero-img">
+      <div class="badge"><i>🏆</i><div><b>Lộ trình 30 ngày</b><br>Thấy thay đổi rõ rệt</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LỘ TRÌNH 30 NGÀY ===================== -->
+<section class="section roadmap" id="gioi-thieu">
+  <div class="container roadmap-grid">
+    <div class="reveal">
+      <div class="video ph" id="videoBox" title="Bấm để xem video">
+        <div class="play">▶</div>
+        <small>Video giới thiệu lộ trình</small>
+      </div>
+    </div>
+    <div class="reveal">
+      <h2 class="section-title">Lộ trình 30 ngày<br>luyện giọng nói</h2>
+      <p style="color:var(--muted);margin-bottom:24px">Mỗi ngày 20 phút, đi từ nền tảng đến biểu cảm, có người chữa bài cho bạn.</p>
+      <div class="steps">
+        <div class="step"><div class="num">1–7</div><div><h4>Hơi thở & phát âm</h4><p>Kiểm soát hơi, sửa ngọng, nói rõ từng chữ.</p></div></div>
+        <div class="step"><div class="num">8–15</div><div><h4>Âm sắc & nhịp điệu</h4><p>Làm giọng ấm, tròn, ngắt nghỉ đúng chỗ.</p></div></div>
+        <div class="step"><div class="num">16–23</div><div><h4>Biểu cảm & truyền cảm</h4><p>Kể chuyện, đọc thơ, nói chạm cảm xúc.</p></div></div>
+        <div class="step"><div class="num">24–30</div><div><h4>Ứng dụng thực tế</h4><p>Livestream, thuyết trình, bán hàng, quay video.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VỀ GIẢNG VIÊN ===================== -->
+<section class="section about">
+  <div class="container about-grid">
+    <div class="about-photo reveal">
+      <img src="images/ngoc-huong-about.jpg" alt="Ngọc Hương đọc sách" loading="lazy">
+      <div class="about-handle">@Ngochuong</div>
+    </div>
+    <div class="reveal">
+      <span class="type-label">Người sáng lập</span>
+      <h2 class="section-title" style="text-align:left">Ngọc Hương</h2>
+      <p class="lead">“Giọng nói là năng lượng sống. Khi bạn nói bằng năng lượng tích cực, người nghe sẽ cảm nhận được.”</p>
+      <p>Ngọc Hương đồng hành cùng học viên rèn luyện giọng nói, phong thái và năng lượng tích cực, để mỗi người tự tin thể hiện mình trong công việc lẫn cuộc sống.</p>
+      <ul class="about-list">
+        <li>[Số năm kinh nghiệm đào tạo giọng nói]</li>
+        <li>[Thành tích / chứng chỉ / vai trò nổi bật]</li>
+        <li>[Số học viên đã đồng hành]</li>
+      </ul>
+      <a href="https://www.facebook.com/huongvo01" target="_blank" rel="noopener" class="btn btn-outline">Theo dõi trên Facebook</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LỢI ÍCH ===================== -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title reveal">Khoá học giúp gì cho bạn</h2>
+    <p class="section-sub reveal">Không chỉ là nói hay, mà là nói để được lắng nghe, tin tưởng và ghi nhớ.</p>
+    <div class="benefits">
+      <div class="benefit reveal"><div class="ico">💼</div><h3>Giọng nói trong kinh doanh</h3><p>Dùng giọng nói làm công cụ bán hàng, đàm phán và xây dựng quan hệ.</p></div>
+      <div class="benefit reveal"><div class="ico">📖</div><h3>Yêu tiếng Việt hơn</h3><p>Diễn đạt mạch lạc, đọc thơ, kể chuyện truyền cảm bằng tiếng mẹ đẻ.</p></div>
+      <div class="benefit reveal"><div class="ico">✨</div><h3>Phong thái tự tin</h3><p>Xây dựng thương hiệu cá nhân bền vững từ cách nói và cách thể hiện.</p></div>
+      <div class="benefit reveal"><div class="ico">🤝</div><h3>Cộng đồng gắn kết</h3><p>Học cùng hàng nghìn người, được chữa bài và hỗ trợ lâu dài.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KHOÁ HỌC ===================== -->
+<section class="section courses" id="khoa-hoc">
+  <div class="container">
+    <h2 class="section-title reveal">Khoá học tại Ngọc Hương</h2>
+    <p class="section-sub reveal">Chọn lộ trình phù hợp với mục tiêu của bạn.</p>
+    <div class="pricing">
+      <div class="card reveal">
+        <span class="type">Online · Video</span>
+        <h3>Nói Hay Cơ Bản</h3>
+        <div class="price">1.490.000đ</div>
+        <p class="desc">Khoá ghi hình sẵn, đăng ký và vào học ngay sau 1 phút.</p>
+        <ul>
+          <li>100+ video luyện giọng & kỹ thuật</li>
+          <li>Học mọi lúc trên điện thoại, máy tính</li>
+          <li>Tham gia cộng đồng chữa bài 1 năm</li>
+          <li>Tài liệu bài tập mỗi ngày</li>
+        </ul>
+        <a href="#" class="btn btn-outline" data-open data-course="Nói Hay Cơ Bản">Đăng ký</a>
+      </div>
+      <div class="card featured reveal">
+        <span class="tag">⭐ Phổ biến nhất</span>
+        <span class="type">Online · Có hướng dẫn</span>
+        <h3>Làm Chủ Giọng Nói</h3>
+        <div class="price">4.990.000đ</div>
+        <p class="desc">Rèn luyện toàn diện từ phát âm, hơi thở đến biểu cảm, có giảng viên kèm.</p>
+        <ul>
+          <li>Phát âm chuẩn & kiểm soát hơi thở</li>
+          <li>Kỹ thuật nói hay, giàu biểu cảm</li>
+          <li>Xây dựng "thanh âm thương hiệu" riêng</li>
+          <li>Thu âm, quay video và được chỉnh sửa trực tiếp</li>
+        </ul>
+        <a href="#" class="btn btn-primary" data-open data-course="Làm Chủ Giọng Nói">Xem chi tiết</a>
+      </div>
+      <div class="card reveal">
+        <span class="type">Coaching 1:1</span>
+        <h3>Elite Mentor</h3>
+        <div class="price">Liên hệ <small>/ chương trình</small></div>
+        <p class="desc">Huấn luyện chuyên sâu cá nhân hoá cho người muốn bứt phá.</p>
+        <ul>
+          <li>Kèm 1:1 cùng giảng viên chính</li>
+          <li>Lộ trình thiết kế riêng</li>
+          <li>Chiến lược thương hiệu cá nhân</li>
+          <li>Hỗ trợ ưu tiên không giới hạn</li>
+        </ul>
+        <a href="#" class="btn btn-outline" data-open data-course="Elite Mentor">Đăng ký tư vấn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CỘNG ĐỒNG ===================== -->
+<section class="section community">
+  <div class="container reveal">
+    <h2>“Nói hay – Sống hay”</h2>
+    <p>Tham gia nhóm học miễn phí mỗi tháng: livestream luyện giọng, bài tập và chữa bài cùng cộng đồng.</p>
+    <a href="#" class="btn btn-gold">💬 Vào nhóm Zalo học miễn phí</a>
+  </div>
+</section>
+
+<!-- ===================== CẢM NHẬN ===================== -->
+<section class="section" id="cam-nhan">
+  <div class="container">
+    <h2 class="section-title reveal">Cảm nhận từ học viên</h2>
+    <p class="section-sub reveal">Hơn 5.000 học viên đã thay đổi cách nói và cách thể hiện bản thân.</p>
+    <div class="slider">
+      <div class="track" id="track">
+        <div class="testi"><div class="stars">★★★★★</div><p>“Sau 3 tuần mình hết nói nhanh, khách hàng nghe điện thoại cũng khen giọng dễ nghe hơn hẳn.”</p><div class="who"><div class="avatar">LA</div><div><b>Lan Anh</b><span>Nhân viên kinh doanh</span></div></div></div>
+        <div class="testi"><div class="stars">★★★★★</div><p>“Livestream bán hàng tự tin hơn, không còn hụt hơi. Doanh số tháng này tăng rõ.”</p><div class="who"><div class="avatar">MT</div><div><b>Minh Tuấn</b><span>Chủ shop online</span></div></div></div>
+        <div class="testi"><div class="stars">★★★★★</div><p>“Bài tập ngắn, dễ theo, được chữa bài rất kỹ. Giọng mình ấm và tròn hơn.”</p><div class="who"><div class="avatar">HN</div><div><b>Hồng Nhung</b><span>Giáo viên</span></div></div></div>
+        <div class="testi"><div class="stars">★★★★★</div><p>“Thuyết trình trước ban giám đốc không còn run. Đáng từng đồng!”</p><div class="who"><div class="avatar">QH</div><div><b>Quốc Huy</b><span>Trưởng phòng</span></div></div></div>
+        <div class="testi"><div class="stars">★★★★★</div><p>“Cộng đồng rất dễ thương, ai cũng hỗ trợ nhau. Mình học thêm cả cách kể chuyện.”</p><div class="who"><div class="avatar">TV</div><div><b>Thu Vân</b><span>Content creator</span></div></div></div>
+      </div>
+      <div class="slider-btns"><button id="prev" aria-label="Trước">←</button><button id="next" aria-label="Sau">→</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KIẾN THỨC ===================== -->
+<section class="section blog">
+  <div class="container">
+    <h2 class="section-title reveal">Kiến thức giọng nói</h2>
+    <p class="section-sub reveal">Chia sẻ ngắn mỗi tuần từ Ngọc Hương.</p>
+    <div class="posts">
+      <a class="post reveal" href="https://www.facebook.com/huongvo01" target="_blank" rel="noopener">
+        <img src="images/post-giong-noi-10-phut.jpg" alt="5 cách giúp giọng nói tốt hơn chỉ 10 phút mỗi ngày" loading="lazy">
+        <div><span class="type-label">Luyện giọng</span><h3>5 cách giúp giọng nói tốt hơn chỉ 10 phút mỗi ngày</h3><span class="more">Đọc bài →</span></div>
+      </a>
+      <a class="post reveal" href="https://www.facebook.com/huongvo01" target="_blank" rel="noopener">
+        <img src="images/post-nang-luong.jpg" alt="Nghèo năng lượng sống còn đáng sợ hơn nghèo tiền bạc" loading="lazy">
+        <div><span class="type-label">Năng lượng sống</span><h3>Nghèo năng lượng sống còn đáng sợ hơn nghèo tiền bạc</h3><span class="more">Đọc bài →</span></div>
+      </a>
+      <a class="post post-cta reveal" href="https://www.facebook.com/huongvo01" target="_blank" rel="noopener">
+        <div><span style="font-size:42px">🎙️</span><h3>Xem thêm bài chia sẻ</h3><p>Theo dõi Ngọc Hương trên Facebook để nhận mẹo luyện giọng mỗi tuần.</p><span class="btn btn-gold">Theo dõi ngay</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ĐỐI TÁC ===================== -->
+<section class="partners">
+  <div class="container">
+    <h2 class="section-title reveal" style="margin-bottom:32px">Đối tác của chúng tôi</h2>
+    <div class="logos reveal">
+      <div>LOGO 1</div><div>LOGO 2</div><div>LOGO 3</div><div>LOGO 4</div><div>LOGO 5</div><div>LOGO 6</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ĐĂNG KÝ / LIÊN HỆ ===================== -->
+<section class="section" id="lien-he">
+  <div class="container">
+    <div class="signup reveal">
+      <div class="signup-info">
+        <h2>Nhận tư vấn miễn phí</h2>
+        <p>Để lại thông tin, đội ngũ sẽ gọi lại trong 24 giờ để chọn lộ trình phù hợp với bạn.</p>
+        <ul>
+          <li>📍 [Địa chỉ của bạn]</li>
+          <li>📞 [Số điện thoại]</li>
+          <li>✉️ [Email liên hệ]</li>
+          <li>🕘 8:00 – 21:00, Thứ 2 – Chủ nhật</li>
+        </ul>
+      </div>
+      <form class="lead-form">
+        <label>Họ và tên<input required name="name" placeholder="Nguyễn Văn A"></label>
+        <label>Số điện thoại<input required name="phone" type="tel" pattern="[0-9 +]{9,13}" placeholder="09xx xxx xxx"></label>
+        <label>Khoá học quan tâm
+          <select name="course"><option>Nói Hay Cơ Bản</option><option>Làm Chủ Giọng Nói</option><option>Elite Mentor</option><option>Chưa chắc, cần tư vấn</option></select>
+        </label>
+        <label>Lời nhắn<textarea name="note" rows="3" placeholder="Mục tiêu của bạn là gì?"></textarea></label>
+        <button class="btn btn-primary" type="submit">Gửi đăng ký</button>
+        <div class="form-ok">🎉 Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container foot">
+    <div>
+      <a href="#" class="logo"><span class="logo-mark">NH</span>Ngọc Hương</a>
+      <p>Học viện luyện giọng nói và xây dựng thương hiệu cá nhân.</p>
+      <div class="socials"><a href="https://www.facebook.com/huongvo01" target="_blank" rel="noopener" aria-label="Facebook">FB</a><a href="#">YT</a><a href="#">TT</a><a href="#">ZL</a></div>
+    </div>
+    <div><h4>Khoá học</h4><ul><li><a href="#khoa-hoc">Nói Hay Cơ Bản</a></li><li><a href="#khoa-hoc">Làm Chủ Giọng Nói</a></li><li><a href="#khoa-hoc">Elite Mentor</a></li><li><a href="#khoa-hoc">Mentor 1:1</a></li></ul></div>
+    <div><h4>Tài nguyên</h4><ul><li><a href="https://www.facebook.com/huongvo01" target="_blank" rel="noopener">Kiến thức giọng nói</a></li><li><a href="#">Quà tặng</a></li><li><a href="#">Câu hỏi thường gặp</a></li><li><a href="#">Chương trình Affiliate</a></li></ul></div>
+    <div><h4>Liên hệ</h4><ul><li>📍 [Địa chỉ]</li><li>📞 [Số điện thoại]</li><li>✉️ [Email]</li></ul></div>
+  </div>
+  <div class="copy">© <span id="year"></span> Ngọc Hương Academy. All rights reserved.</div>
+</footer>
+
+<!-- ===================== NÚT NỔI ===================== -->
+<div class="floating">
+  <a href="https://zalo.me/" class="f-zalo" target="_blank" rel="noopener" aria-label="Zalo">Zalo</a>
+  <a href="https://m.me/" class="f-mess" target="_blank" rel="noopener" aria-label="Messenger">💬</a>
+  <a href="tel:0900000000" class="f-phone" aria-label="Gọi điện">📞</a>
+</div>
+
+<!-- ===================== MODAL ĐĂNG KÝ ===================== -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="close" id="close" aria-label="Đóng">×</button>
+    <form class="lead-form">
+      <h3>Đăng ký học</h3>
+      <p style="color:var(--muted);font-size:14px">Khoá: <b id="mCourse">Tư vấn chung</b></p>
+      <input type="hidden" name="course" id="mCourseInput">
+      <label>Họ và tên<input required name="name"></label>
+      <label>Số điện thoại<input required name="phone" type="tel" pattern="[0-9 +]{9,13}"></label>
+      <label>Email<input name="email" type="email"></label>
+      <button class="btn btn-primary" type="submit">Xác nhận đăng ký</button>
+      <div class="form-ok">🎉 Đăng ký thành công! Chúng tôi sẽ liên hệ sớm.</div>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Menu mobile
+  const menu=document.getElementById('menu');
+  document.getElementById('burger').onclick=()=>menu.classList.toggle('open');
+  menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
+
+  // Slider cảm nhận
+  const track=document.getElementById('track');
+  const step=()=>track.querySelector('.testi').offsetWidth+22;
+  document.getElementById('next').onclick=()=>track.scrollBy({left:step()});
+  document.getElementById('prev').onclick=()=>track.scrollBy({left:-step()});
+  setInterval(()=>{
+    if(track.scrollLeft+track.clientWidth>=track.scrollWidth-5) track.scrollTo({left:0});
+    else track.scrollBy({left:step()});
+  },5000);
+
+  // Modal đăng ký
+  const modal=document.getElementById('modal');
+  document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',e=>{
+    e.preventDefault();
+    const c=b.dataset.course||'Tư vấn chung';
+    document.getElementById('mCourse').textContent=c;
+    document.getElementById('mCourseInput').value=c;
+    modal.classList.add('open');
+  }));
+  document.getElementById('close').onclick=()=>modal.classList.remove('open');
+  modal.onclick=e=>{if(e.target===modal)modal.classList.remove('open')};
+
+  // Gửi form (demo) — thay bằng Google Sheets / email / CRM của bạn
+  document.querySelectorAll('.lead-form').forEach(f=>f.addEventListener('submit',e=>{
+    e.preventDefault();
+    const data=Object.fromEntries(new FormData(f));
+    console.log('Đăng ký mới:',data);
+    f.querySelector('.form-ok').style.display='block';
+    f.reset();
+  }));
+
+  // Video (thay link YouTube của bạn)
+  document.getElementById('videoBox').onclick=function(){
+    this.innerHTML='<iframe width="100%" height="100%" style="border:0;position:absolute;inset:0" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+  };
+
+  // Hiệu ứng xuất hiện khi cuộn
+  const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
