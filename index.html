@@ -152,6 +152,9 @@
   input,select,textarea{width:100%;padding:13px 16px;border:1.5px solid #e4d8cd;border-radius:12px;font-family:inherit;font-size:15px;background:var(--paper);margin-top:6px}
   input:focus,select:focus,textarea:focus{outline:none;border-color:var(--primary)}
   .form-ok{display:none;background:#e9f7ee;color:#17663a;padding:14px;border-radius:12px;font-weight:600}
+  .form-err{display:none;background:#fdecea;color:#9b1c1c;padding:14px;border-radius:12px;font-weight:600}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  button[disabled]{opacity:.7;cursor:wait}
 
   /* ====== FOOTER ====== */
   footer{background:#1a1010;color:#d8cbc2;padding:70px 0 0}
@@ -474,7 +477,8 @@
           <li>🕘 8:00 – 21:00, Thứ 2 – Chủ nhật</li>
         </ul>
       </div>
-      <form class="lead-form">
+      <form class="lead-form" data-source="Nhận tư vấn">
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label>Họ và tên<input required name="name" placeholder="Nguyễn Văn A"></label>
         <label>Số điện thoại<input required name="phone" type="tel" pattern="[0-9 +]{9,13}" placeholder="09xx xxx xxx"></label>
         <label>Khoá học quan tâm
@@ -482,6 +486,7 @@
         </label>
         <label>Lời nhắn<textarea name="note" rows="3" placeholder="Mục tiêu của bạn là gì?"></textarea></label>
         <button class="btn btn-primary" type="submit">Gửi đăng ký</button>
+        <div class="form-err" role="alert"></div>
         <div class="form-ok">🎉 Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm.</div>
       </form>
     </div>
@@ -514,7 +519,8 @@
 <div class="modal" id="modal">
   <div class="modal-box">
     <button class="close" id="close" aria-label="Đóng">×</button>
-    <form class="lead-form">
+    <form class="lead-form" data-source="Đăng ký học (popup)">
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <h3>Đăng ký học</h3>
       <p style="color:var(--muted);font-size:14px">Khoá: <b id="mCourse">Tư vấn chung</b></p>
       <input type="hidden" name="course" id="mCourseInput">
@@ -522,7 +528,8 @@
       <label>Số điện thoại<input required name="phone" type="tel" pattern="[0-9 +]{9,13}"></label>
       <label>Email<input name="email" type="email"></label>
       <button class="btn btn-primary" type="submit">Xác nhận đăng ký</button>
-      <div class="form-ok">🎉 Đăng ký thành công! Chúng tôi sẽ liên hệ sớm.</div>
+      <div class="form-err" role="alert"></div>
+        <div class="form-ok">🎉 Đăng ký thành công! Chúng tôi sẽ liên hệ sớm.</div>
     </form>
   </div>
 </div>
@@ -555,13 +562,23 @@
   document.getElementById('close').onclick=()=>modal.classList.remove('open');
   modal.onclick=e=>{if(e.target===modal)modal.classList.remove('open')};
 
-  // Gửi form (demo) — thay bằng Google Sheets / email / CRM của bạn
-  document.querySelectorAll('.lead-form').forEach(f=>f.addEventListener('submit',e=>{
+  // ===== Gửi form vào Google Sheets =====
+  // Dán link "Ứng dụng web" của Apps Script vào đây:
+  const SHEET_ENDPOINT='';
+  document.querySelectorAll('.lead-form').forEach(f=>f.addEventListener('submit',async e=>{
     e.preventDefault();
-    const data=Object.fromEntries(new FormData(f));
-    console.log('Đăng ký mới:',data);
-    f.querySelector('.form-ok').style.display='block';
-    f.reset();
+    const btn=f.querySelector('button[type=submit]'), ok=f.querySelector('.form-ok'), err=f.querySelector('.form-err');
+    ok.style.display='none'; err.style.display='none';
+    if(!SHEET_ENDPOINT){err.textContent='Form chưa được kết nối. Vui lòng gọi hoặc nhắn Zalo cho chúng tôi.';err.style.display='block';return;}
+    const fd=new FormData(f);
+    fd.append('source',f.dataset.source||'website');
+    btn.disabled=true; const label=btn.textContent; btn.textContent='Đang gửi…';
+    try{
+      await fetch(SHEET_ENDPOINT,{method:'POST',mode:'no-cors',body:new URLSearchParams(fd)});
+      ok.style.display='block'; f.reset();
+    }catch(_){
+      err.textContent='Gửi không thành công do lỗi mạng. Vui lòng thử lại hoặc nhắn Zalo cho chúng tôi.';err.style.display='block';
+    }finally{btn.disabled=false;btn.textContent=label;}
   }));
 
   // Video (thay link YouTube của bạn)
