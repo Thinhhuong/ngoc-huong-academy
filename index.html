@@ -564,7 +564,7 @@
 
   // ===== Gửi form vào Google Sheets =====
   // Dán link "Ứng dụng web" của Apps Script vào đây:
-  const SHEET_ENDPOINT='';
+  const SHEET_ENDPOINT='https://script.google.com/macros/s/AKfycbwNzCFy4s1lTTwNI5Z07yxDbkUSKYmmruzX7B6y-_StkRikq6rdJgk3DKqdyZMaE5aGTg/exec';
   document.querySelectorAll('.lead-form').forEach(f=>f.addEventListener('submit',async e=>{
     e.preventDefault();
     const btn=f.querySelector('button[type=submit]'), ok=f.querySelector('.form-ok'), err=f.querySelector('.form-err');
