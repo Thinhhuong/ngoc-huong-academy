@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>MC Ngọc Hương – Profile dẫn chương trình</title>
+<meta property="og:type" content="profile">
+<meta property="og:title" content="MC Ngọc Hương – Profile dẫn chương trình">
+<meta property="og:description" content="MC sự kiện tại Đà Nẵng: hội thảo doanh nghiệp, gala, talkshow, sự kiện thanh niên và chương trình thiếu nhi.">
+<meta property="og:image" content="https://thinhhuong.github.io/ngoc-huong-academy/images/profile/og-mc.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:url" content="https://thinhhuong.github.io/ngoc-huong-academy/mc/">
+<meta name="description" content="Profile MC Ngọc Hương – MC sự kiện tại Đà Nẵng.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ====== ĐỔI MÀU THƯƠNG HIỆU TẠI ĐÂY ====== */
+  :root{
+    --primary:#a00000;      /* đỏ thẫm (theo ảnh) */
+    --primary-bright:#b00101; /* đỏ đèn chiếu */
+    --primary-deep:#490101;   /* đỏ rượu mép tối */
+    --primary-dark:#6e0001;
+    --secondary:#a47965;    /* nâu be */
+    --cream:#efe8df;        /* nền be */
+    --paper:#fffdfa;
+    --highlight:#ffd93b;    /* vàng nhấn */
+    --ink:#161210;
+    --muted:#5e5550;
+    --radius:18px;
+    --shadow:0 12px 34px rgba(73,1,1,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Quicksand",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:16px}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .container{width:min(1180px,100% - 32px);margin-inline:auto}
+  .display{font-family:"Playfair Display",Georgia,serif;letter-spacing:.3px}
+  .section{padding:88px 0}
+  .section-title{font-family:"Playfair Display",Georgia,serif;font-size:clamp(26px,4vw,40px);color:var(--primary);text-align:center;line-height:1.25;margin-bottom:14px;text-transform:uppercase}
+  .section-sub{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 48px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 30px;border-radius:999px;font-weight:700;letter-spacing:.5px;cursor:pointer;border:2px solid transparent;transition:.25s;font-family:inherit;font-size:15px}
+  .btn-primary{background:var(--primary);color:#fff}
+  .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px)}
+  .btn-gold{background:var(--highlight);color:var(--ink)}
+  .btn-gold:hover{filter:brightness(.95);transform:translateY(-2px)}
+  .btn-outline{border-color:var(--primary);color:var(--primary);background:transparent}
+  .btn-outline:hover{background:var(--primary);color:#fff}
+
+  /* ====== HEADER ====== */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,253,250,.94);backdrop-filter:blur(8px);border-bottom:1px solid #eadfd5}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:"Playfair Display",serif;font-weight:800;font-size:22px;color:var(--primary)}
+  .logo-mark{width:42px;height:42px;border-radius:50%;background:var(--primary);color:var(--highlight);display:grid;place-items:center;font-size:16px;letter-spacing:.5px}
+  .menu{display:flex;gap:30px;list-style:none;font-weight:600}
+  .menu a{position:relative;padding:6px 0}
+  .menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--primary);transition:.25s}
+  .menu a:hover::after,.menu a.active::after{width:100%}
+  .nav-actions{display:flex;gap:10px;align-items:center}
+  .nav-actions .btn{padding:10px 20px;font-size:14px}
+  .burger{display:none;background:none;border:0;font-size:28px;color:var(--primary);cursor:pointer}
+
+  /* ====== HERO ====== */
+  .hero{background:
+      radial-gradient(ellipse 45% 70% at 18% 0%,rgba(176,1,1,.9),transparent 70%),
+      radial-gradient(ellipse 45% 70% at 82% 0%,rgba(176,1,1,.9),transparent 70%),
+      linear-gradient(180deg,#840000 0%,var(--primary-deep) 100%);color:#fff;overflow:hidden}
+  .hero .container{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;min-height:600px;padding:60px 0}
+  .eyebrow{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:6px 16px;border-radius:999px;font-size:14px;margin-bottom:22px}
+  .hero h1{font-family:"Playfair Display",serif;font-size:clamp(40px,6vw,72px);line-height:1.08;margin-bottom:20px}
+  .hero h1 em{color:var(--highlight);font-style:italic}
+  .hero p{font-size:18px;opacity:.9;max-width:520px;margin-bottom:34px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-ctas .btn-outline{border-color:#fff;color:#fff}
+  .hero-ctas .btn-outline:hover{background:#fff;color:var(--primary)}
+  .hero-stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+  .hero-stats b{display:block;font-family:"Playfair Display",serif;font-size:34px;color:var(--highlight)}
+  .hero-stats span{font-size:14px;opacity:.85}
+  .hero-visual{position:relative;aspect-ratio:4/5;border-radius:220px 220px 24px 24px;background:linear-gradient(160deg,#c49a85,#8a5a48);box-shadow:0 30px 60px rgba(0,0,0,.35);display:grid;place-items:center;text-align:center;color:rgba(255,255,255,.85);font-weight:600}
+  .hero-visual .badge{position:absolute;left:-24px;bottom:40px;background:#fff;color:var(--ink);padding:14px 18px;border-radius:16px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center;font-size:14px;text-align:left}
+  .hero-visual .badge i{font-style:normal;font-size:26px}
+
+  /* placeholder ảnh */
+  .ph{background:repeating-linear-gradient(45deg,rgba(255,255,255,.08) 0 12px,transparent 12px 24px)}
+
+  /* ====== ROADMAP 30 NGÀY ====== */
+  .roadmap{background:var(--cream)}
+  .roadmap-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .video{position:relative;aspect-ratio:16/9;border-radius:var(--radius);background:linear-gradient(135deg,var(--primary-deep),var(--primary-bright));overflow:hidden;box-shadow:var(--shadow);display:grid;place-items:center;cursor:pointer}
+  .video .play{width:84px;height:84px;border-radius:50%;background:var(--highlight);display:grid;place-items:center;font-size:30px;color:var(--primary);box-shadow:0 0 0 14px rgba(255,217,59,.25);transition:.3s}
+  .video:hover .play{transform:scale(1.08)}
+  .video small{position:absolute;bottom:14px;left:18px;color:#fff;opacity:.8}
+  .steps{display:grid;gap:16px}
+  .step{display:flex;gap:18px;background:#fff;padding:20px 22px;border-radius:16px;box-shadow:0 4px 14px rgba(73,1,1,.06)}
+  .step .num{flex:0 0 54px;height:54px;border-radius:14px;background:var(--primary);color:var(--highlight);display:grid;place-items:center;font-family:"Playfair Display",serif;font-weight:800;font-size:15px;text-align:center;line-height:1.1}
+  .step h4{font-size:17px;margin-bottom:2px}
+  .step p{color:var(--muted);font-size:15px}
+  .roadmap .section-title{text-align:center}
+
+  /* ====== LỢI ÍCH ====== */
+  .benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .benefit{background:#fff;border:1px solid #eee3d9;border-radius:var(--radius);padding:32px 24px;transition:.3s;position:relative;overflow:hidden}
+  .benefit::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--primary),var(--secondary))}
+  .benefit:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .benefit .ico{width:60px;height:60px;border-radius:50%;background:var(--cream);display:grid;place-items:center;font-size:28px;margin-bottom:18px}
+  .benefit h3{font-size:18px;color:var(--primary);margin-bottom:8px}
+  .benefit p{color:var(--muted);font-size:15px}
+
+  /* ====== KHOÁ HỌC / BẢNG GIÁ ====== */
+  .courses{background:linear-gradient(180deg,var(--paper),var(--cream))}
+  .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch}
+  .card{background:#fff;border-radius:24px;padding:34px 28px;box-shadow:var(--shadow);display:flex;flex-direction:column;position:relative;border:2px solid transparent;transition:.3s}
+  .card:hover{transform:translateY(-6px)}
+  .card.featured{border-color:var(--primary);background:linear-gradient(180deg,#fff,#fff5f5)}
+  .card .tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--highlight);color:var(--ink);font-weight:700;font-size:13px;padding:5px 16px;border-radius:999px;white-space:nowrap}
+  .card .type{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--secondary);font-weight:700}
+  .card h3{font-family:"Playfair Display",serif;font-size:24px;color:var(--primary);margin:8px 0 12px;line-height:1.25}
+  .price{font-family:"Playfair Display",serif;font-size:38px;font-weight:800;color:var(--ink);margin-bottom:6px}
+  .price small{font-family:"Quicksand";font-size:15px;color:var(--muted);font-weight:500}
+  .card .desc{color:var(--muted);font-size:15px;margin-bottom:18px}
+  .card ul{list-style:none;display:grid;gap:10px;margin-bottom:28px;flex:1}
+  .card li{display:flex;gap:10px;font-size:15px}
+  .card li::before{content:"✓";flex:0 0 22px;height:22px;border-radius:50%;background:var(--cream);color:var(--primary);display:grid;place-items:center;font-weight:700;font-size:12px;margin-top:1px}
+  .card .btn{width:100%}
+
+  /* ====== CỘNG ĐỒNG ====== */
+  .community{background:radial-gradient(ellipse 60% 90% at 50% 0%,var(--primary-bright),transparent 75%),linear-gradient(180deg,#840000,var(--primary-deep));color:#fff;text-align:center;position:relative;overflow:hidden}
+  .community::before,.community::after{content:"❝";position:absolute;font-family:"Playfair Display";font-size:260px;opacity:.07;line-height:1}
+  .community::before{left:4%;top:-30px}.community::after{content:"❞";right:4%;bottom:-120px}
+  .community h2{font-family:"Playfair Display",serif;font-size:clamp(30px,5vw,54px);font-style:italic;margin-bottom:14px}
+  .community p{opacity:.88;max-width:620px;margin:0 auto 30px}
+
+  /* ====== CẢM NHẬN ====== */
+  .slider{position:relative}
+  .track{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:8px 4px 24px;scrollbar-width:none}
+  .track::-webkit-scrollbar{display:none}
+  .testi{flex:0 0 calc((100% - 44px)/3);scroll-snap-align:start;background:#fff;border-radius:var(--radius);padding:28px;box-shadow:0 6px 20px rgba(73,1,1,.08);border:1px solid #f0e6dc}
+  .stars{color:#e6a800;letter-spacing:2px;margin-bottom:12px}
+  .testi p{color:var(--muted);font-size:15px;margin-bottom:20px;font-style:italic}
+  .who{display:flex;gap:12px;align-items:center}
+  .avatar{width:48px;height:48px;border-radius:50%;background:var(--secondary);color:#fff;display:grid;place-items:center;font-weight:700}
+  .who b{display:block}.who span{font-size:13px;color:var(--muted)}
+  .slider-btns{display:flex;justify-content:center;gap:12px}
+  .slider-btns button{width:46px;height:46px;border-radius:50%;border:2px solid var(--primary);background:#fff;color:var(--primary);font-size:18px;cursor:pointer;transition:.2s}
+  .slider-btns button:hover{background:var(--primary);color:#fff}
+
+  /* ====== ĐỐI TÁC ====== */
+  .partners{background:var(--cream);padding:64px 0}
+  .logos{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+  .logos div{height:80px;background:#fff;border-radius:14px;display:grid;place-items:center;font-weight:700;color:#b6a79c;letter-spacing:1px;filter:grayscale(1);transition:.3s}
+  .logos div:hover{color:var(--primary);filter:none;box-shadow:var(--shadow)}
+
+  /* ====== ĐĂNG KÝ ====== */
+  .signup{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:#fff;border-radius:28px;box-shadow:var(--shadow);overflow:hidden}
+  .signup-info{background:linear-gradient(160deg,var(--primary-bright),var(--primary-deep));color:#fff;padding:48px}
+  .signup-info h2{font-family:"Playfair Display",serif;font-size:34px;margin-bottom:14px}
+  .signup-info ul{list-style:none;margin-top:24px;display:grid;gap:12px}
+  form{padding:48px 48px 48px 8px;display:grid;gap:14px}
+  label{font-weight:600;font-size:14px}
+  input,select,textarea{width:100%;padding:13px 16px;border:1.5px solid #e4d8cd;border-radius:12px;font-family:inherit;font-size:15px;background:var(--paper);margin-top:6px}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--primary)}
+  .form-ok{display:none;background:#e9f7ee;color:#17663a;padding:14px;border-radius:12px;font-weight:600}
+  .form-err{display:none;background:#fdecea;color:#9b1c1c;padding:14px;border-radius:12px;font-weight:600}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  button[disabled]{opacity:.7;cursor:wait}
+
+  /* ====== FOOTER ====== */
+  footer{background:#2a0101;color:#d8cbc2;padding:70px 0 0}
+  .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+  footer h4{color:#fff;font-size:17px;margin-bottom:16px}
+  footer ul{list-style:none;display:grid;gap:10px;font-size:15px}
+  footer a:hover{color:var(--highlight)}
+  .foot .logo{color:#fff;margin-bottom:14px}
+  .socials{display:flex;gap:10px;margin-top:18px}
+  .socials a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;font-weight:700;font-size:13px}
+  .socials a:hover{background:var(--primary);color:#fff}
+  .copy{border-top:1px solid rgba(255,255,255,.1);margin-top:50px;padding:22px 0;text-align:center;font-size:14px;opacity:.7}
+
+  /* ====== NÚT NỔI ====== */
+  .floating{position:fixed;right:18px;bottom:18px;display:grid;gap:12px;z-index:60}
+  .floating a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:13px;box-shadow:0 8px 20px rgba(0,0,0,.25);transition:.2s}
+  .floating a:hover{transform:scale(1.08)}
+  .f-zalo{background:#0068ff}.f-mess{background:linear-gradient(45deg,#0099ff,#a033ff)}
+  .f-phone{background:#18a94b;animation:ring 1.6s infinite}
+  @keyframes ring{0%{box-shadow:0 0 0 0 rgba(24,169,75,.6)}70%{box-shadow:0 0 0 16px rgba(24,169,75,0)}100%{box-shadow:0 0 0 0 rgba(24,169,75,0)}}
+
+  /* ====== MODAL ====== */
+  .modal{position:fixed;inset:0;background:rgba(20,10,8,.6);display:none;place-items:center;z-index:100;padding:16px}
+  .modal.open{display:grid}
+  .modal-box{background:#fff;border-radius:22px;max-width:460px;width:100%;position:relative}
+  .modal-box form{padding:36px}
+  .modal-box h3{font-family:"Playfair Display",serif;color:var(--primary);font-size:26px}
+  .close{position:absolute;top:12px;right:16px;background:none;border:0;font-size:28px;cursor:pointer;color:var(--muted)}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:.7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ====== LỘ TRÌNH & LỊCH ====== */
+  .steps-grid{grid-template-columns:repeat(2,1fr);gap:18px}
+  .pricing-2{grid-template-columns:repeat(2,1fr);max-width:860px;margin-inline:auto}
+
+  /* ====== ẢNH HERO ====== */
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:inherit}
+  .hero-visual{overflow:visible}
+
+  /* ====== VỀ GIẢNG VIÊN ====== */
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+  .about{overflow:hidden}
+  .about-photo{position:relative;isolation:isolate}
+  .about-photo img{border-radius:24px;aspect-ratio:3/4;object-fit:cover;width:100%;box-shadow:var(--shadow)}
+  .about-photo::before{content:"";position:absolute;inset:22px -22px -22px 22px;border:2px solid var(--secondary);border-radius:24px;z-index:-1}
+  .about-handle{position:absolute;bottom:18px;left:18px;background:rgba(255,255,255,.92);color:var(--primary);font-weight:700;padding:8px 16px;border-radius:999px}
+  .type-label{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--secondary);font-weight:700}
+  .about .lead{font-family:"Playfair Display",serif;font-style:italic;font-size:21px;color:var(--primary);margin:6px 0 16px;line-height:1.45}
+  .about p{color:var(--muted);margin-bottom:16px}
+  .about-list{list-style:none;display:grid;gap:10px;margin:8px 0 28px}
+  .about-list li{display:flex;gap:10px}
+  .about-list li::before{content:"✦";color:var(--primary)}
+
+  /* ====== KIẾN THỨC ====== */
+  .blog{background:var(--cream)}
+  .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .post{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 20px rgba(73,1,1,.08);display:flex;flex-direction:column;transition:.3s}
+  .post:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .post img{aspect-ratio:4/5;object-fit:cover;width:100%}
+  .post>div{padding:20px 22px 24px}
+  .post h3{font-size:18px;margin:6px 0 10px;line-height:1.35}
+  .post .more{color:var(--primary);font-weight:700;font-size:14px}
+  .post-cta{background:linear-gradient(160deg,var(--primary-bright),var(--primary-deep));color:#fff;justify-content:center;text-align:center}
+  .post-cta p{opacity:.85;margin-bottom:22px;font-size:15px}
+  .post-cta h3{font-family:"Playfair Display",serif;font-size:26px}
+
+  /* ====== PROFILE ====== */
+  .p-hero .container{grid-template-columns:1fr .8fr}
+  .p-name{font-family:"Playfair Display",serif;font-size:clamp(44px,7vw,80px);line-height:1.02;margin-bottom:16px}
+  .p-name em{color:var(--highlight)}
+  .p-roles{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 30px}
+  .p-roles span{border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:999px;font-size:14px;background:rgba(255,255,255,.08)}
+  .fields{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+  .field{background:#fff;border-radius:16px;padding:22px 18px;text-align:center;box-shadow:0 4px 14px rgba(73,1,1,.06);border-top:3px solid var(--primary)}
+  .field b{display:block;font-size:30px;margin-bottom:6px}
+  .field h4{color:var(--primary);font-size:16px;margin-bottom:4px}
+  .field p{color:var(--muted);font-size:14px}
+  .gallery{columns:3 300px;column-gap:20px}
+  .filters{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:-20px 0 34px}
+  .chip{border:1.5px solid var(--primary);background:#fff;color:var(--primary);border-radius:999px;padding:9px 16px;font-family:inherit;font-weight:700;font-size:14px;cursor:pointer;transition:.2s}
+  .chip small{opacity:.7;font-weight:600}
+  .chip.on,.chip:hover{background:var(--primary);color:#fff}
+  .chip:focus-visible{outline:3px solid var(--highlight);outline-offset:2px}
+  .shot[hidden]{display:none}
+  .shot{break-inside:avoid;margin-bottom:20px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(73,1,1,.08);cursor:zoom-in}
+  .shot img{width:100%;display:block;transition:.4s}
+  .shot:hover img{transform:scale(1.03)}
+  .shot figcaption{padding:14px 18px 18px}
+  .shot .when{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--secondary);font-weight:700}
+  .shot h3{font-size:16px;line-height:1.4;margin-top:4px}
+  .shot p{color:var(--muted);font-size:14px;margin-top:4px}
+  .feature{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .feature-imgs{display:grid;grid-template-columns:.75fr 1fr;gap:14px;align-items:end}
+  .feature-imgs img{border-radius:16px;box-shadow:var(--shadow);width:100%;object-fit:cover}
+  .other-list{columns:2 280px;column-gap:28px;list-style:none}
+  .other-list li{break-inside:avoid;padding:12px 0;border-bottom:1px solid #eadfd5;display:flex;gap:12px}
+  .other-list li::before{content:"🎤";flex:0 0 auto}
+  .other-list small{display:block;color:var(--muted)}
+  .contact-card{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .cc{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:22px;min-width:0}
+  .cc span{font-size:13px;opacity:.8;letter-spacing:1px;text-transform:uppercase}
+  .cc b{display:block;font-size:18px;margin:6px 0 12px;word-break:break-word}
+  .cc button,.cc a.mini{background:var(--highlight);color:var(--ink);border:0;border-radius:999px;padding:8px 16px;font-weight:700;font-family:inherit;cursor:pointer;font-size:14px;display:inline-block}
+  .lightbox{position:fixed;inset:0;background:rgba(20,0,0,.88);display:none;place-items:center;z-index:120;padding:20px;cursor:zoom-out}
+  .lightbox.open{display:grid}
+  .lightbox img{max-height:86vh;max-width:100%;border-radius:12px}
+  .lightbox p{color:#fff;text-align:center;margin-top:12px}
+  @media (max-width:1024px){.fields{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:860px){.p-hero .container,.feature{grid-template-columns:1fr}.contact-card{grid-template-columns:1fr}}
+  @media (max-width:560px){.fields{grid-template-columns:1fr 1fr}}
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width:1024px){
+    .benefits{grid-template-columns:repeat(2,1fr)}
+    .pricing,.pricing-2{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
+    .testi{flex-basis:calc((100% - 22px)/2)}
+    .logos{grid-template-columns:repeat(3,1fr)}
+    .foot{grid-template-columns:1fr 1fr}
+    .posts{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:860px){
+    .menu,.nav-actions .btn-outline{display:none}
+    .burger{display:block}
+    .menu.open{display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:var(--paper);padding:20px 24px;gap:16px;border-bottom:1px solid #eadfd5;box-shadow:var(--shadow)}
+    .hero .container,.roadmap-grid,.signup,.about-grid{grid-template-columns:1fr}
+    .about-photo{max-width:420px;margin:0 auto 12px}
+    .hero .container{min-height:auto;padding:56px 0}
+    .hero-visual{max-width:360px;margin:auto;width:100%}
+    .hero-visual .badge{left:0}
+    .roadmap .section-title{text-align:center}
+    .steps-grid{grid-template-columns:1fr}
+    form{padding:32px}
+    .signup-info{padding:36px 32px}
+  }
+  @media (max-width:560px){
+    .section{padding:64px 0}
+    .benefits{grid-template-columns:1fr}
+    .testi{flex-basis:88%}
+    .logos{grid-template-columns:repeat(2,1fr)}
+    .foot{grid-template-columns:1fr}
+    .posts{grid-template-columns:1fr}
+    .nav-actions .btn-primary{padding:9px 14px;font-size:13px}
+    .hero-stats{gap:22px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="container nav">
+    <a href="#" class="logo"><span class="logo-mark">NH</span>MC Ngọc Hương</a>
+    <ul class="menu" id="menu">
+      <li><a href="#linh-vuc">Lĩnh vực</a></li>
+      <li><a href="#thu-vien">Chương trình</a></li>
+      <li><a href="#lien-he-mc">Liên hệ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#lien-he-mc" class="btn btn-primary">Mời MC</a>
+      <button class="burger" id="burger" aria-label="Mở menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== PROFILE HERO ===================== -->
+<section class="hero p-hero">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">🎤 MC sự kiện · Đà Nẵng & miền Trung</span>
+      <h1 class="p-name">MC<br><em>Ngọc Hương</em></h1>
+      <p>Dẫn dắt hội thảo doanh nghiệp, gala, talkshow và các chương trình cộng đồng tại Đà Nẵng. Giọng dẫn rõ ràng, ấm áp, linh hoạt theo không khí từng chương trình.</p>
+      <div class="p-roles"><span>Hội thảo doanh nghiệp</span><span>Gala & Year End Party</span><span>Talkshow</span><span>Sự kiện Đoàn – Thanh niên</span><span>Chương trình thiếu nhi</span></div>
+      <div class="hero-ctas">
+        <a href="#lien-he-mc" class="btn btn-gold">MỜI MC / LIÊN HỆ</a>
+        <a href="#thu-vien" class="btn btn-outline">Xem chương trình</a>
+              </div>
+    </div>
+    <div class="hero-visual reveal">
+      <img src="../images/profile/mc-quan-tri-dong-tien.jpg" alt="MC Ngọc Hương trên sân khấu" class="hero-img">
+      <div class="badge"><i>🎙️</i><div><b>MC sự kiện</b><br>Đà Nẵng & miền Trung</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LĨNH VỰC ===================== -->
+<section class="section roadmap" id="linh-vuc">
+  <div class="container">
+    <h2 class="section-title reveal">Lĩnh vực dẫn chương trình</h2>
+    <p class="section-sub reveal">Mỗi loại sự kiện cần một giọng dẫn khác nhau: trang trọng, sôi nổi hay gần gũi.</p>
+    <div class="fields">
+      <div class="field reveal"><b>💼</b><h4>Hội thảo</h4><p>Doanh nghiệp, xúc tiến thương mại, chia sẻ chuyên đề</p></div>
+      <div class="field reveal"><b>🥂</b><h4>Gala & tiệc</h4><p>Gala, Year End Party, Family Night</p></div>
+      <div class="field reveal"><b>🗣️</b><h4>Talkshow</h4><p>Dẫn dắt, đặt câu hỏi cùng diễn giả</p></div>
+      <div class="field reveal"><b>🎓</b><h4>Thanh niên</h4><p>Đại hội Đoàn, ngày hội việc làm, JCI</p></div>
+      <div class="field reveal"><b>🎈</b><h4>Thiếu nhi</h4><p>Trung thu, Tết, chương trình cho bé</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CHƯƠNG TRÌNH TIÊU BIỂU ===================== -->
+<section class="section" id="thu-vien">
+  <div class="container">
+    <h2 class="section-title reveal">Chương trình đã dẫn</h2>
+    <p class="section-sub reveal">26 khoảnh khắc trên sân khấu. Chọn loại chương trình để lọc, bấm vào ảnh để xem lớn.</p>
+    <div class="filters" role="tablist"><button type="button" class="chip on" data-f="all">Tất cả <small>26</small></button><button type="button" class="chip" data-f="dn">Doanh nghiệp & hội thảo <small>10</small></button><button type="button" class="chip" data-f="gala">Gala & tiệc <small>5</small></button><button type="button" class="chip" data-f="talk">Talkshow & toạ đàm <small>2</small></button><button type="button" class="chip" data-f="tn">Thanh niên & cộng đồng <small>8</small></button><button type="button" class="chip" data-f="kid">Thiếu nhi <small>1</small></button></div>
+    <div class="gallery">
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-doi-thoai-thanh-nien.jpg" alt="Đối thoại Doanh nhân & Thanh niên – Sinh viên" loading="lazy"><figcaption><span class="when">Đà Nẵng · 30/10/2022</span><h3>Đối thoại Doanh nhân & Thanh niên – Sinh viên</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-hoi-thao-lanh-dao.jpg" alt="Tư duy lãnh đạo trong vận hành chiến lược" loading="lazy"><figcaption><span class="when">Hội thảo · 28/10/2022</span><h3>Tư duy lãnh đạo trong vận hành chiến lược</h3><p>Diễn giả Lê Phụng Hào.</p></figcaption></figure>
+      <figure class="shot reveal" data-cat="gala"><img src="../images/profile/mc-ati-gala.jpg" alt="The Success Principles – Học viện ATI" loading="lazy"><figcaption><span class="when">Gala</span><h3>The Success Principles – Học viện ATI</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-xuc-tien-thuong-mai.jpg" alt="Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng" loading="lazy"><figcaption><span class="when">Doanh nghiệp</span><h3>Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng</h3><p>Với sự tham gia của Shark Phạm Thanh Hưng & Shark Nguyễn Xuân Phú.</p></figcaption></figure>
+      <figure class="shot reveal" data-cat="talk"><img src="../images/profile/mc-talkshow-thuong-hieu.jpg" alt="Xây dựng thương hiệu cá nhân" loading="lazy"><figcaption><span class="when">Talkshow</span><h3>Xây dựng thương hiệu cá nhân</h3><p>Diễn giả Nguyễn Ngọc Long.</p></figcaption></figure>
+      <figure class="shot reveal" data-cat="gala"><img src="../images/profile/mc-family-night.jpg" alt="Family Night – Stronger Together" loading="lazy"><figcaption><span class="when">13/10/2022</span><h3>Family Night – Stronger Together</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-doanh-nhan-tre.jpg" alt="Doanh nhân trẻ & câu chuyện kết nối" loading="lazy"><figcaption><span class="when">Đà Nẵng · 08/2022</span><h3>Doanh nhân trẻ & câu chuyện kết nối</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="../images/profile/mc-dai-hoi-vii.jpg" alt="Đại hội VII" loading="lazy"><figcaption><span class="when">Nhiệm kỳ 2022 – 2025</span><h3>Đại hội VII</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-quan-tri-dong-tien.jpg" alt="Lễ ra mắt Ban Chủ nhiệm & chủ đề “Quản trị khủng hoảng dòng tiền”" loading="lazy"><figcaption><span class="when">Đà Nẵng · 25/03/2022</span><h3>Lễ ra mắt Ban Chủ nhiệm & chủ đề “Quản trị khủng hoảng dòng tiền”</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="talk"><img src="../images/profile/mc-toa-dam-marketer.jpg" alt="Hành trang Marketer 4.0 & kinh nghiệm phát triển nghề nghiệp" loading="lazy"><figcaption><span class="when">Toạ đàm</span><h3>Hành trang Marketer 4.0 & kinh nghiệm phát triển nghề nghiệp</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="gala"><img src="../images/profile/mc-year-end-party.jpg" alt="Bảo hiểm Phú Hưng – Central 3" loading="lazy"><figcaption><span class="when">Year End Party 2021</span><h3>Bảo hiểm Phú Hưng – Central 3</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="../images/profile/mc-ngay-hoi-viec-lam.jpg" alt="Ngày hội tư vấn – giới thiệu việc làm & định hướng khởi nghiệp, lập nghiệp" loading="lazy"><figcaption><span class="when">TP. Đà Nẵng</span><h3>Ngày hội tư vấn – giới thiệu việc làm & định hướng khởi nghiệp, lập nghiệp</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-hoi-thao-lanh-dao-2.jpg" alt="Tặng hoa diễn giả Lê Phụng Hào" loading="lazy"><figcaption><span class="when">Hội thảo · 28/10/2022</span><h3>Tặng hoa diễn giả Lê Phụng Hào</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="gala"><img src="../images/profile/mc-jci-new-year.jpg" alt="New Year Party" loading="lazy"><figcaption><span class="when">JCI · 12/2021</span><h3>New Year Party</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="../images/profile/mc-vui-tet-da-nang.jpg" alt="Vui Tết cùng chúng tôi" loading="lazy"><figcaption><span class="when">TP. Đà Nẵng · Xuân Nhâm Dần</span><h3>Vui Tết cùng chúng tôi</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-du-bao-hanh-dong-2023.jpg" alt="Dự báo & hành động 2023" loading="lazy"><figcaption><span class="when">Cuối năm 2022</span><h3>Dự báo & hành động 2023</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="gala"><img src="../images/profile/mc-ati-gala-2.jpg" alt="The Success Principles – Học viện ATI" loading="lazy"><figcaption><span class="when">Gala</span><h3>The Success Principles – Học viện ATI</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="../images/profile/mc-jci-your-dreams.jpg" alt="Dự án Your Dreams 2022" loading="lazy"><figcaption><span class="when">JCI · 2022</span><h3>Dự án Your Dreams 2022</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-xuc-tien-hoi-truong.jpg" alt="Xúc tiến thương mại Hà Nội – Đà Nẵng: hội trường" loading="lazy"><figcaption><span class="when">Doanh nghiệp</span><h3>Xúc tiến thương mại Hà Nội – Đà Nẵng: hội trường</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="../images/profile/mc-dai-hoi-doan-khoa-iv.jpg" alt="Đại hội khoá IV" loading="lazy"><figcaption><span class="when">Đoàn – Hội</span><h3>Đại hội khoá IV</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-doanh-nhan-tre-2.jpg" alt="Doanh nhân trẻ & câu chuyện kết nối" loading="lazy"><figcaption><span class="when">Đà Nẵng · 08/2022</span><h3>Doanh nhân trẻ & câu chuyện kết nối</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="kid"><img src="../images/profile/mc-chuong-trinh-thieu-nhi.jpg" alt="Các chương trình dành cho trẻ em" loading="lazy"><figcaption><span class="when">Thiếu nhi</span><h3>Các chương trình dành cho trẻ em</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="../images/profile/mc-xung-kich-tinh-nguyen.jpg" alt="Xung kích, tình nguyện" loading="lazy"><figcaption><span class="when">Đoàn – Hội</span><h3>Xung kích, tình nguyện</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-san-khau-do.jpg" alt="Đêm chương trình doanh nghiệp" loading="lazy"><figcaption><span class="when">Doanh nghiệp</span><h3>Đêm chương trình doanh nghiệp</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="../images/profile/mc-buc-phat-bieu.jpg" alt="Dẫn chương trình tại bục phát biểu" loading="lazy"><figcaption><span class="when">Sự kiện</span><h3>Dẫn chương trình tại bục phát biểu</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="../images/profile/mc-san-khau-ngoi-sao.jpg" alt="Chương trình cộng đồng" loading="lazy"><figcaption><span class="when">Sự kiện</span><h3>Chương trình cộng đồng</h3></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TALKSHOW NỔI BẬT ===================== -->
+<section class="section roadmap">
+  <div class="container feature">
+    <div class="feature-imgs reveal">
+      <img src="../images/profile/talkshow-ngoc-long.jpg" alt="Ngọc Hương dẫn talkshow cùng diễn giả" loading="lazy">
+      <img src="../images/profile/talkshow-anh-tap-the.jpg" alt="Ảnh tập thể talkshow Thương hiệu cá nhân" loading="lazy">
+    </div>
+    <div class="reveal">
+      <span class="type-label">Talkshow nổi bật</span>
+      <h2 class="section-title" style="text-align:left">Xây dựng thương hiệu cá nhân</h2>
+      <p style="color:var(--muted);margin-bottom:16px">Diễn giả: anh Nguyễn Ngọc Long. Ngọc Hương dẫn dắt và đặt câu hỏi cùng diễn giả trước khán phòng đầy người tham dự.</p>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CHƯƠNG TRÌNH KHÁC ===================== -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title reveal">Diễn giả & khách mời đã đồng hành</h2>
+    <ul class="other-list reveal" style="margin-top:28px">
+      <li><div>Toạ đàm “Hành trang Marketer 4.0 & kinh nghiệm phát triển nghề nghiệp”<small>Trường Đại học Đông Á · 27/04/2021</small></div></li>
+      <li><div>Talkshow “Xây dựng thương hiệu cá nhân”<small>Diễn giả Nguyễn Ngọc Long</small></div></li>
+      <li><div>Hội thảo “Tư duy lãnh đạo trong vận hành chiến lược”<small>28/10/2022 · diễn giả Lê Phụng Hào</small></div></li>
+      <li><div>Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng<small>Shark Phạm Thanh Hưng & Shark Nguyễn Xuân Phú</small></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== LIÊN HỆ MC ===================== -->
+<section class="section community" id="lien-he-mc">
+  <div class="container reveal">
+    <h2>Mời MC Ngọc Hương</h2>
+    <p>Liên hệ để trao đổi về chương trình, lịch trống và chi phí.</p>
+    <div class="contact-card" style="text-align:left;margin-top:10px">
+      <div class="cc"><span>Điện thoại / Zalo</span><b id="cc-phone">035.7676.259</b><button type="button" data-copy="cc-phone">Sao chép số</button></div>
+      <div class="cc"><span>Email</span><b id="cc-mail">vothingochuong101@gmail.com</b><button type="button" data-copy="cc-mail">Sao chép email</button></div>
+      <div class="cc"><span>Facebook</span><b>facebook.com/huongvo01</b><a class="mini" href="https://www.facebook.com/huongvo01" target="_blank" rel="noopener">Mở Facebook</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox"><figure><img id="lbImg" alt=""><p id="lbCap"></p></figure></div>
+
+<footer style="padding:34px 0">
+  <div class="container" style="text-align:center;font-size:15px">
+    <b style="color:#fff">MC Ngọc Hương</b> · 035.7676.259 · vothingochuong101@gmail.com
+    <div style="margin-top:8px;opacity:.7;font-size:13px">Đồng thời là giảng viên lớp <a href="../" style="text-decoration:underline">Luyện Giọng Cùng Hương</a></div>
+  </div>
+</footer>
+
+<div class="floating">
+  <a href="https://zalo.me/0357676259" class="f-zalo" target="_blank" rel="noopener" aria-label="Nhắn Zalo">Zalo</a>
+  <a href="tel:0357676259" class="f-phone" aria-label="Gọi điện">📞</a>
+</div>
+
+<script>
+  const menu=document.getElementById('menu');
+  document.getElementById('burger').onclick=()=>menu.classList.toggle('open');
+  menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
+  // Phóng to ảnh
+  const lb=document.getElementById('lightbox');
+  document.querySelectorAll('.shot').forEach(s=>s.onclick=()=>{
+    document.getElementById('lbImg').src=s.querySelector('img').src;
+    document.getElementById('lbCap').textContent=s.querySelector('h3').textContent;
+    lb.classList.add('open');
+  });
+  lb.onclick=()=>lb.classList.remove('open');
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open')});
+  // Lọc thư viện ảnh
+  document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{
+    document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===c));
+    const f=c.dataset.f;
+    document.querySelectorAll('.shot').forEach(s=>{s.hidden=!(f==='all'||s.dataset.cat===f);if(!s.hidden)s.classList.add('in')});
+  });
+  // Sao chép liên hệ
+  document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=async()=>{
+    const el=document.getElementById(b.dataset.copy), label=b.textContent;
+    try{await navigator.clipboard.writeText(el.textContent);b.textContent='Đã sao chép';}
+    catch(_){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Đã chọn, nhấn Ctrl+C';}
+    setTimeout(()=>b.textContent=label,2000);
+  });
+  const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
