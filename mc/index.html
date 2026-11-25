@@ -237,7 +237,7 @@
   .p-name em{color:var(--highlight)}
   .p-roles{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 30px}
   .p-roles span{border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:999px;font-size:14px;background:rgba(255,255,255,.08)}
-  .fields{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+  .fields{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
   .field{background:#fff;border-radius:16px;padding:22px 18px;text-align:center;box-shadow:0 4px 14px rgba(73,1,1,.06);border-top:3px solid var(--primary)}
   .field b{display:block;font-size:30px;margin-bottom:6px}
   .field h4{color:var(--primary);font-size:16px;margin-bottom:4px}
@@ -272,7 +272,7 @@
   .lightbox.open{display:grid}
   .lightbox img{max-height:86vh;max-width:100%;border-radius:12px}
   .lightbox p{color:#fff;text-align:center;margin-top:12px}
-  @media (max-width:1024px){.fields{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:1024px){.fields{grid-template-columns:repeat(2,1fr)}}
   @media (max-width:860px){.p-hero .container,.feature{grid-template-columns:1fr}.contact-card{grid-template-columns:1fr}}
   @media (max-width:560px){.fields{grid-template-columns:1fr 1fr}}
 
@@ -336,7 +336,7 @@
       <span class="eyebrow">🎤 MC sự kiện · Đà Nẵng & miền Trung</span>
       <h1 class="p-name">MC<br><em>Ngọc Hương</em></h1>
       <p>Dẫn dắt hội thảo doanh nghiệp, gala, talkshow và các chương trình cộng đồng tại Đà Nẵng. Giọng dẫn rõ ràng, ấm áp, linh hoạt theo không khí từng chương trình.</p>
-      <div class="p-roles"><span>Hội thảo doanh nghiệp</span><span>Gala & Year End Party</span><span>Talkshow</span><span>Đại hội, hiệp hội</span><span>Sự kiện Đoàn – Thanh niên</span><span>Chương trình thiếu nhi</span></div>
+      <div class="p-roles"><span>Hội thảo doanh nghiệp</span><span>Gala & Year End Party</span><span>Talkshow</span><span>Đại hội, hiệp hội</span><span>Sự kiện Đoàn – Thanh niên</span><span>Chương trình thiếu nhi</span><span>Diễn giả, workshop</span></div>
       <div class="hero-ctas">
         <a href="#lien-he-mc" class="btn btn-gold">MỜI MC / LIÊN HỆ</a>
         <a href="#thu-vien" class="btn btn-outline">Xem chương trình</a>
@@ -360,6 +360,7 @@
       <div class="field reveal"><b>🗣️</b><h4>Talkshow</h4><p>Dẫn dắt, đặt câu hỏi cùng diễn giả</p></div>
       <div class="field reveal"><b>🎓</b><h4>Thanh niên</h4><p>Đại hội Đoàn, ngày hội việc làm, JCI</p></div>
       <div class="field reveal"><b>🎈</b><h4>Thiếu nhi</h4><p>Trung thu, Tết, chương trình cho bé</p></div>
+      <div class="field reveal"><b>🎤</b><h4>Diễn giả & đào tạo</h4><p>Workshop giọng nói, thuyết trình, thương hiệu cá nhân</p></div>
     </div>
   </div>
 </section>
@@ -368,9 +369,12 @@
 <section class="section" id="thu-vien">
   <div class="container">
     <h2 class="section-title reveal">Chương trình đã dẫn</h2>
-    <p class="section-sub reveal">35 khoảnh khắc trên sân khấu. Chọn loại chương trình để lọc, bấm vào ảnh để xem lớn.</p>
-    <div class="filters" role="tablist"><button type="button" class="chip on" data-f="all">Tất cả <small>35</small></button><button type="button" class="chip" data-f="new">Mới nhất 2026 <small>9</small></button><button type="button" class="chip" data-f="dn">Doanh nghiệp & hội thảo <small>10</small></button><button type="button" class="chip" data-f="gala">Gala & tiệc <small>5</small></button><button type="button" class="chip" data-f="talk">Talkshow & toạ đàm <small>2</small></button><button type="button" class="chip" data-f="tn">Thanh niên & cộng đồng <small>8</small></button><button type="button" class="chip" data-f="kid">Thiếu nhi <small>1</small></button></div>
+    <p class="section-sub reveal">44 khoảnh khắc trên sân khấu. Chọn loại chương trình để lọc, bấm vào ảnh để xem lớn.</p>
+    <div class="filters" role="tablist"><button type="button" class="chip on" data-f="all">Tất cả <small>44</small></button><button type="button" class="chip" data-f="new">Mới nhất 2026 <small>11</small></button><button type="button" class="chip" data-f="speak">Diễn giả & đào tạo <small>5</small></button><button type="button" class="chip" data-f="dn">Doanh nghiệp & hội thảo <small>12</small></button><button type="button" class="chip" data-f="gala">Gala & tiệc <small>5</small></button><button type="button" class="chip" data-f="talk">Talkshow & toạ đàm <small>2</small></button><button type="button" class="chip" data-f="tn">Thanh niên & cộng đồng <small>8</small></button><button type="button" class="chip" data-f="kid">Thiếu nhi <small>1</small></button></div>
     <div class="gallery">
+      <figure class="shot reveal" data-cat="new"><img src="../images/profile/mc-2026-hoi-nghi-mo-rong.jpg" alt="Hội nghị Ban Chấp hành mở rộng lần thứ III" loading="lazy"><figcaption><span class="when">Đà Nẵng · 03/07/2026</span><h3>Hội nghị Ban Chấp hành mở rộng lần thứ III</h3><p>Sơ kết 6 tháng đầu năm 2026.</p></figcaption></figure>
+      <figure class="shot reveal" data-cat="speak"><img src="../images/profile/ds-2026-camp-connect-personal-branding.jpg" alt="Diễn giả chủ đề “Personal Branding in real life?”" loading="lazy"><figcaption><span class="when">Camp Connect · 2026</span><h3>Diễn giả chủ đề “Personal Branding in real life?”</h3><p>Presenter tại 2026 Danang Camp Connect – Pacific Links Foundation & Hội Từ thiện và Bảo vệ quyền trẻ em TP. Đà Nẵng.</p></figcaption></figure>
+      <figure class="shot reveal" data-cat="new"><img src="../images/profile/mc-2026-mot-thap-ky-vang.jpg" alt="Một thập kỷ vàng – Tri ân và sẵn sàng" loading="lazy"><figcaption><span class="when">Đà Nẵng · 01/2026</span><h3>Một thập kỷ vàng – Tri ân và sẵn sàng</h3></figcaption></figure>
       <figure class="shot reveal" data-cat="new"><img src="../images/profile/mc-2026-dai-hoi-van-chuyen-micro.jpg" alt="Đại hội Chi hội Vận chuyển du lịch TP. Đà Nẵng lần thứ III" loading="lazy"><figcaption><span class="when">Đà Nẵng · 17/10/2026</span><h3>Đại hội Chi hội Vận chuyển du lịch TP. Đà Nẵng lần thứ III</h3><p>Nhiệm kỳ 2026 – 2030 · Hiệp hội Du lịch TP. Đà Nẵng.</p></figcaption></figure>
       <figure class="shot reveal" data-cat="new"><img src="../images/profile/mc-2026-dai-hoi-van-chuyen-san-khau.jpg" alt="Chúc mừng thành công Đại hội lần thứ III" loading="lazy"><figcaption><span class="when">Đà Nẵng · 17/10/2026</span><h3>Chúc mừng thành công Đại hội lần thứ III</h3><p>Chi hội Vận chuyển du lịch TP. Đà Nẵng.</p></figcaption></figure>
       <figure class="shot reveal" data-cat="new"><img src="../images/profile/mc-2026-dai-hoi-van-chuyen-buc.jpg" alt="Dẫn chương trình Đại hội tại bục phát biểu" loading="lazy"><figcaption><span class="when">Đà Nẵng · 2026</span><h3>Dẫn chương trình Đại hội tại bục phát biểu</h3><p>Chi hội Vận chuyển du lịch TP. Đà Nẵng, nhiệm kỳ 2026 – 2030.</p></figcaption></figure>
@@ -380,10 +384,16 @@
       <figure class="shot reveal" data-cat="new"><img src="../images/profile/mc-2026-hau-truong-dam-vang.jpg" alt="Hậu trường Đại hội lần thứ III" loading="lazy"><figcaption><span class="when">Hậu trường · 2026</span><h3>Hậu trường Đại hội lần thứ III</h3></figcaption></figure>
       <figure class="shot reveal" data-cat="new"><img src="../images/profile/mc-2026-don-tiep-khach-quoc-te.jpg" alt="Đón tiếp khách quốc tế" loading="lazy"><figcaption><span class="when">Đối ngoại</span><h3>Đón tiếp khách quốc tế</h3></figcaption></figure>
       <figure class="shot reveal" data-cat="new"><img src="../images/profile/mc-2026-don-tiep-khach-quoc-te-2.jpg" alt="Đồng hành cùng đoàn khách quốc tế" loading="lazy"><figcaption><span class="when">Đối ngoại</span><h3>Đồng hành cùng đoàn khách quốc tế</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="speak"><img src="../images/profile/ds-camp-connect-workshop-giong-noi.jpg" alt="Workshop giọng nói cho các bạn trẻ" loading="lazy"><figcaption><span class="when">Camp Connect</span><h3>Workshop giọng nói cho các bạn trẻ</h3><p>Chương trình “Building a Brighter Tomorrow”.</p></figcaption></figure>
+      <figure class="shot reveal" data-cat="speak"><img src="../images/profile/ds-pacific-links-lop-giong-noi.jpg" alt="Chủ đề “Khai phá giọng nói & ngôn ngữ thuyết trình”" loading="lazy"><figcaption><span class="when">Pacific Links Foundation</span><h3>Chủ đề “Khai phá giọng nói & ngôn ngữ thuyết trình”</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="speak"><img src="../images/profile/ds-truong-vo-thi-sau.jpg" alt="Truyền thông “Bảo vệ trẻ em trên môi trường mạng”" loading="lazy"><figcaption><span class="when">Trường Tiểu học Võ Thị Sáu</span><h3>Truyền thông “Bảo vệ trẻ em trên môi trường mạng”</h3><p>Hội Từ thiện & Bảo vệ quyền trẻ em phường Thuận Phước.</p></figcaption></figure>
+      <figure class="shot reveal" data-cat="speak"><img src="../images/profile/ds-camp-connect-tham-do.jpg" alt="Pacific Links Foundation" loading="lazy"><figcaption><span class="when">Camp Connect</span><h3>Pacific Links Foundation</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-2023-toa-dam-nang-tam-lanh-dao.jpg" alt="Toạ đàm “Nâng tầm lãnh đạo” – Kết nối doanh nhân trẻ tỉnh thành" loading="lazy"><figcaption><span class="when">Đà Nẵng · 17/07/2023</span><h3>Toạ đàm “Nâng tầm lãnh đạo” – Kết nối doanh nhân trẻ tỉnh thành</h3><p>Khách mời: anh Mai Hữu Tín, Chủ tịch U&I Group.</p></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-2022-xuc-tien-sanh.jpg" alt="Toạ đàm “Doanh nghiệp Việt – Sẵn sàng đối mặt”" loading="lazy"><figcaption><span class="when">Đà Nẵng · 12/08/2022</span><h3>Toạ đàm “Doanh nghiệp Việt – Sẵn sàng đối mặt”</h3><p>Chương trình Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng.</p></figcaption></figure>
       <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-doi-thoai-thanh-nien.jpg" alt="Đối thoại Doanh nhân & Thanh niên – Sinh viên" loading="lazy"><figcaption><span class="when">Đà Nẵng · 30/10/2022</span><h3>Đối thoại Doanh nhân & Thanh niên – Sinh viên</h3></figcaption></figure>
       <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-hoi-thao-lanh-dao.jpg" alt="Tư duy lãnh đạo trong vận hành chiến lược" loading="lazy"><figcaption><span class="when">Hội thảo · 28/10/2022</span><h3>Tư duy lãnh đạo trong vận hành chiến lược</h3><p>Diễn giả Lê Phụng Hào.</p></figcaption></figure>
       <figure class="shot reveal" data-cat="gala"><img src="../images/profile/mc-ati-gala.jpg" alt="The Success Principles – Học viện ATI" loading="lazy"><figcaption><span class="when">Gala</span><h3>The Success Principles – Học viện ATI</h3></figcaption></figure>
-      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-xuc-tien-thuong-mai.jpg" alt="Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng" loading="lazy"><figcaption><span class="when">Doanh nghiệp</span><h3>Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng</h3><p>Với sự tham gia của Shark Phạm Thanh Hưng & Shark Nguyễn Xuân Phú.</p></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-xuc-tien-thuong-mai.jpg" alt="Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng" loading="lazy"><figcaption><span class="when">Đà Nẵng · 12/08/2022</span><h3>Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng</h3><p>Với sự tham gia của Shark Phạm Thanh Hưng & Shark Nguyễn Xuân Phú.</p></figcaption></figure>
       <figure class="shot reveal" data-cat="talk"><img src="../images/profile/mc-talkshow-thuong-hieu.jpg" alt="Xây dựng thương hiệu cá nhân" loading="lazy"><figcaption><span class="when">Talkshow</span><h3>Xây dựng thương hiệu cá nhân</h3><p>Diễn giả Nguyễn Ngọc Long.</p></figcaption></figure>
       <figure class="shot reveal" data-cat="gala"><img src="../images/profile/mc-family-night.jpg" alt="Family Night – Stronger Together" loading="lazy"><figcaption><span class="when">13/10/2022</span><h3>Family Night – Stronger Together</h3></figcaption></figure>
       <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-doanh-nhan-tre.jpg" alt="Doanh nhân trẻ & câu chuyện kết nối" loading="lazy"><figcaption><span class="when">Đà Nẵng · 08/2022</span><h3>Doanh nhân trẻ & câu chuyện kết nối</h3></figcaption></figure>
@@ -398,7 +408,7 @@
       <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-du-bao-hanh-dong-2023.jpg" alt="Dự báo & hành động 2023" loading="lazy"><figcaption><span class="when">Cuối năm 2022</span><h3>Dự báo & hành động 2023</h3></figcaption></figure>
       <figure class="shot reveal" data-cat="gala"><img src="../images/profile/mc-ati-gala-2.jpg" alt="The Success Principles – Học viện ATI" loading="lazy"><figcaption><span class="when">Gala</span><h3>The Success Principles – Học viện ATI</h3></figcaption></figure>
       <figure class="shot reveal" data-cat="tn"><img src="../images/profile/mc-jci-your-dreams.jpg" alt="Dự án Your Dreams 2022" loading="lazy"><figcaption><span class="when">JCI · 2022</span><h3>Dự án Your Dreams 2022</h3></figcaption></figure>
-      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-xuc-tien-hoi-truong.jpg" alt="Xúc tiến thương mại Hà Nội – Đà Nẵng: hội trường" loading="lazy"><figcaption><span class="when">Doanh nghiệp</span><h3>Xúc tiến thương mại Hà Nội – Đà Nẵng: hội trường</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-xuc-tien-hoi-truong.jpg" alt="Xúc tiến thương mại Hà Nội – Đà Nẵng: hội trường" loading="lazy"><figcaption><span class="when">Đà Nẵng · 12/08/2022</span><h3>Xúc tiến thương mại Hà Nội – Đà Nẵng: hội trường</h3></figcaption></figure>
       <figure class="shot reveal" data-cat="tn"><img src="../images/profile/mc-dai-hoi-doan-khoa-iv.jpg" alt="Đại hội khoá IV" loading="lazy"><figcaption><span class="when">Đoàn – Hội</span><h3>Đại hội khoá IV</h3></figcaption></figure>
       <figure class="shot reveal" data-cat="dn"><img src="../images/profile/mc-doanh-nhan-tre-2.jpg" alt="Doanh nhân trẻ & câu chuyện kết nối" loading="lazy"><figcaption><span class="when">Đà Nẵng · 08/2022</span><h3>Doanh nhân trẻ & câu chuyện kết nối</h3></figcaption></figure>
       <figure class="shot reveal" data-cat="kid"><img src="../images/profile/mc-chuong-trinh-thieu-nhi.jpg" alt="Các chương trình dành cho trẻ em" loading="lazy"><figcaption><span class="when">Thiếu nhi</span><h3>Các chương trình dành cho trẻ em</h3></figcaption></figure>
@@ -434,7 +444,9 @@
       <li><div>Toạ đàm “Hành trang Marketer 4.0 & kinh nghiệm phát triển nghề nghiệp”<small>Trường Đại học Đông Á · 27/04/2021</small></div></li>
       <li><div>Talkshow “Xây dựng thương hiệu cá nhân”<small>Diễn giả Nguyễn Ngọc Long</small></div></li>
       <li><div>Hội thảo “Tư duy lãnh đạo trong vận hành chiến lược”<small>28/10/2022 · diễn giả Lê Phụng Hào</small></div></li>
-      <li><div>Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng<small>Shark Phạm Thanh Hưng & Shark Nguyễn Xuân Phú</small></div></li>
+      <li><div>Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng<small>12/08/2022 · Shark Phạm Thanh Hưng & Shark Nguyễn Xuân Phú</small></div></li>
+      <li><div>Toạ đàm “Nâng tầm lãnh đạo”<small>17/07/2023 · anh Mai Hữu Tín, Chủ tịch U&amp;I Group</small></div></li>
+      <li><div>2026 Danang Camp Connect – diễn giả “Personal Branding”<small>Pacific Links Foundation & Hội Từ thiện và Bảo vệ quyền trẻ em TP. Đà Nẵng</small></div></li>
     </ul>
   </div>
 </section>
