@@ -1,5 +1,5 @@
 /**
- * Nhận đăng ký từ website Ngọc Hương Academy và ghi vào Google Sheet.
+ * Nhận đăng ký từ website Luyện Giọng Cùng Hương và ghi vào Google Sheet.
  * Cách cài: mở Google Sheet → Tiện ích mở rộng → Apps Script → dán toàn bộ file này → Lưu
  *          → Triển khai → Tùy chọn triển khai mới → Ứng dụng web
  *          (Thực thi dưới dạng: Tôi · Người có quyền truy cập: Bất kỳ ai) → Triển khai.
@@ -52,7 +52,7 @@ function doPost(e) {
 }
 
 function doGet() {
-  return ContentService.createTextOutput('Ngọc Hương Academy form endpoint đang hoạt động.');
+  return ContentService.createTextOutput('Luyện Giọng Cùng Hương form endpoint đang hoạt động.');
 }
 
 function ok_() {

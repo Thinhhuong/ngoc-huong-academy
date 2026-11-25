@@ -1,4 +1,4 @@
-# Ngọc Hương Academy
+# Luyện Giọng Cùng Hương
 
 Website giới thiệu học viện luyện giọng nói & xây dựng thương hiệu cá nhân.
 
