@@ -237,6 +237,12 @@
   .field h4{color:var(--primary);font-size:16px;margin-bottom:4px}
   .field p{color:var(--muted);font-size:14px}
   .gallery{columns:3 300px;column-gap:20px}
+  .filters{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:-20px 0 34px}
+  .chip{border:1.5px solid var(--primary);background:#fff;color:var(--primary);border-radius:999px;padding:9px 16px;font-family:inherit;font-weight:700;font-size:14px;cursor:pointer;transition:.2s}
+  .chip small{opacity:.7;font-weight:600}
+  .chip.on,.chip:hover{background:var(--primary);color:#fff}
+  .chip:focus-visible{outline:3px solid var(--highlight);outline-offset:2px}
+  .shot[hidden]{display:none}
   .shot{break-inside:avoid;margin-bottom:20px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(73,1,1,.08);cursor:zoom-in}
   .shot img{width:100%;display:block;transition:.4s}
   .shot:hover img{transform:scale(1.03)}
@@ -329,8 +335,8 @@
       <div class="p-roles"><span>Hội thảo doanh nghiệp</span><span>Gala & Year End Party</span><span>Talkshow</span><span>Sự kiện Đoàn – Thanh niên</span><span>Chương trình thiếu nhi</span></div>
       <div class="hero-ctas">
         <a href="#lien-he-mc" class="btn btn-gold">MỜI MC / LIÊN HỆ</a>
-        <a href="index.html#khoa-hoc" class="btn btn-outline">Khoá luyện giọng</a>
-      </div>
+        <a href="#thu-vien" class="btn btn-outline">Xem chương trình</a>
+              </div>
     </div>
     <div class="hero-visual reveal">
       <img src="images/profile/mc-quan-tri-dong-tien.jpg" alt="MC Ngọc Hương trên sân khấu" class="hero-img">
@@ -355,21 +361,38 @@
 </section>
 
 <!-- ===================== CHƯƠNG TRÌNH TIÊU BIỂU ===================== -->
-<section class="section">
+<section class="section" id="thu-vien">
   <div class="container">
-    <h2 class="section-title reveal">Chương trình tiêu biểu</h2>
-    <p class="section-sub reveal">Bấm vào ảnh để xem lớn.</p>
+    <h2 class="section-title reveal">Chương trình đã dẫn</h2>
+    <p class="section-sub reveal">26 khoảnh khắc trên sân khấu. Chọn loại chương trình để lọc, bấm vào ảnh để xem lớn.</p>
+    <div class="filters" role="tablist"><button type="button" class="chip on" data-f="all">Tất cả <small>26</small></button><button type="button" class="chip" data-f="dn">Doanh nghiệp & hội thảo <small>10</small></button><button type="button" class="chip" data-f="gala">Gala & tiệc <small>5</small></button><button type="button" class="chip" data-f="talk">Talkshow & toạ đàm <small>2</small></button><button type="button" class="chip" data-f="tn">Thanh niên & cộng đồng <small>8</small></button><button type="button" class="chip" data-f="kid">Thiếu nhi <small>1</small></button></div>
     <div class="gallery">
-      <figure class="shot reveal"><img src="images/profile/mc-doi-thoai-thanh-nien.jpg" alt="Đối thoại Doanh nhân & Thanh niên – Sinh viên" loading="lazy"><figcaption><span class="when">Đà Nẵng · 30/10/2022</span><h3>Đối thoại Doanh nhân & Thanh niên – Sinh viên</h3></figcaption></figure>
-      <figure class="shot reveal"><img src="images/profile/mc-ati-gala.jpg" alt="The Success Principles – Học viện ATI" loading="lazy"><figcaption><span class="when">Gala</span><h3>The Success Principles – Học viện ATI</h3></figcaption></figure>
-      <figure class="shot reveal"><img src="images/profile/mc-xuc-tien-thuong-mai.jpg" alt="Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng" loading="lazy"><figcaption><span class="when">Doanh nghiệp</span><h3>Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng</h3><p>Với sự tham gia của Shark Phạm Thanh Hưng & Shark Nguyễn Xuân Phú.</p></figcaption></figure>
-      <figure class="shot reveal"><img src="images/profile/mc-doanh-nhan-tre.jpg" alt="Doanh nhân trẻ & câu chuyện kết nối" loading="lazy"><figcaption><span class="when">Đà Nẵng · 08/2022</span><h3>Doanh nhân trẻ & câu chuyện kết nối</h3></figcaption></figure>
-      <figure class="shot reveal"><img src="images/profile/mc-quan-tri-dong-tien.jpg" alt="Lễ ra mắt Ban Chủ nhiệm & chia sẻ chủ đề “Quản trị khủng hoảng dòng tiền”" loading="lazy"><figcaption><span class="when">Đà Nẵng · 25/03/2022</span><h3>Lễ ra mắt Ban Chủ nhiệm & chia sẻ chủ đề “Quản trị khủng hoảng dòng tiền”</h3></figcaption></figure>
-      <figure class="shot reveal"><img src="images/profile/mc-hoi-thao-chien-luoc.jpg" alt="Hội thảo về vận hành chiến lược doanh nghiệp" loading="lazy"><figcaption><span class="when">Hội thảo</span><h3>Hội thảo về vận hành chiến lược doanh nghiệp</h3></figcaption></figure>
-      <figure class="shot reveal"><img src="images/profile/mc-year-end-party.jpg" alt="Bảo hiểm Phú Hưng – Central 3" loading="lazy"><figcaption><span class="when">Year End Party 2021</span><h3>Bảo hiểm Phú Hưng – Central 3</h3></figcaption></figure>
-      <figure class="shot reveal"><img src="images/profile/mc-vui-tet-da-nang.jpg" alt="Vui Tết cùng chúng tôi" loading="lazy"><figcaption><span class="when">TP. Đà Nẵng · Xuân Nhâm Dần</span><h3>Vui Tết cùng chúng tôi</h3></figcaption></figure>
-      <figure class="shot reveal"><img src="images/profile/mc-jci-your-dreams.jpg" alt="Dự án Your Dreams 2022" loading="lazy"><figcaption><span class="when">JCI · 2022</span><h3>Dự án Your Dreams 2022</h3></figcaption></figure>
-      <figure class="shot reveal"><img src="images/profile/mc-chuong-trinh-thieu-nhi.jpg" alt="Các chương trình dành cho trẻ em" loading="lazy"><figcaption><span class="when">Thiếu nhi</span><h3>Các chương trình dành cho trẻ em</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="images/profile/mc-doi-thoai-thanh-nien.jpg" alt="Đối thoại Doanh nhân & Thanh niên – Sinh viên" loading="lazy"><figcaption><span class="when">Đà Nẵng · 30/10/2022</span><h3>Đối thoại Doanh nhân & Thanh niên – Sinh viên</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="images/profile/mc-hoi-thao-lanh-dao.jpg" alt="Tư duy lãnh đạo trong vận hành chiến lược" loading="lazy"><figcaption><span class="when">Hội thảo · 28/10/2022</span><h3>Tư duy lãnh đạo trong vận hành chiến lược</h3><p>Diễn giả Lê Phụng Hào.</p></figcaption></figure>
+      <figure class="shot reveal" data-cat="gala"><img src="images/profile/mc-ati-gala.jpg" alt="The Success Principles – Học viện ATI" loading="lazy"><figcaption><span class="when">Gala</span><h3>The Success Principles – Học viện ATI</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="images/profile/mc-xuc-tien-thuong-mai.jpg" alt="Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng" loading="lazy"><figcaption><span class="when">Doanh nghiệp</span><h3>Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng</h3><p>Với sự tham gia của Shark Phạm Thanh Hưng & Shark Nguyễn Xuân Phú.</p></figcaption></figure>
+      <figure class="shot reveal" data-cat="talk"><img src="images/profile/mc-talkshow-thuong-hieu.jpg" alt="Xây dựng thương hiệu cá nhân" loading="lazy"><figcaption><span class="when">Talkshow</span><h3>Xây dựng thương hiệu cá nhân</h3><p>Diễn giả Nguyễn Ngọc Long.</p></figcaption></figure>
+      <figure class="shot reveal" data-cat="gala"><img src="images/profile/mc-family-night.jpg" alt="Family Night – Stronger Together" loading="lazy"><figcaption><span class="when">13/10/2022</span><h3>Family Night – Stronger Together</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="images/profile/mc-doanh-nhan-tre.jpg" alt="Doanh nhân trẻ & câu chuyện kết nối" loading="lazy"><figcaption><span class="when">Đà Nẵng · 08/2022</span><h3>Doanh nhân trẻ & câu chuyện kết nối</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="images/profile/mc-dai-hoi-vii.jpg" alt="Đại hội VII" loading="lazy"><figcaption><span class="when">Nhiệm kỳ 2022 – 2025</span><h3>Đại hội VII</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="images/profile/mc-quan-tri-dong-tien.jpg" alt="Lễ ra mắt Ban Chủ nhiệm & chủ đề “Quản trị khủng hoảng dòng tiền”" loading="lazy"><figcaption><span class="when">Đà Nẵng · 25/03/2022</span><h3>Lễ ra mắt Ban Chủ nhiệm & chủ đề “Quản trị khủng hoảng dòng tiền”</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="talk"><img src="images/profile/mc-toa-dam-marketer.jpg" alt="Hành trang Marketer 4.0 & kinh nghiệm phát triển nghề nghiệp" loading="lazy"><figcaption><span class="when">Toạ đàm</span><h3>Hành trang Marketer 4.0 & kinh nghiệm phát triển nghề nghiệp</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="gala"><img src="images/profile/mc-year-end-party.jpg" alt="Bảo hiểm Phú Hưng – Central 3" loading="lazy"><figcaption><span class="when">Year End Party 2021</span><h3>Bảo hiểm Phú Hưng – Central 3</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="images/profile/mc-ngay-hoi-viec-lam.jpg" alt="Ngày hội tư vấn – giới thiệu việc làm & định hướng khởi nghiệp, lập nghiệp" loading="lazy"><figcaption><span class="when">TP. Đà Nẵng</span><h3>Ngày hội tư vấn – giới thiệu việc làm & định hướng khởi nghiệp, lập nghiệp</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="images/profile/mc-hoi-thao-lanh-dao-2.jpg" alt="Tặng hoa diễn giả Lê Phụng Hào" loading="lazy"><figcaption><span class="when">Hội thảo · 28/10/2022</span><h3>Tặng hoa diễn giả Lê Phụng Hào</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="gala"><img src="images/profile/mc-jci-new-year.jpg" alt="New Year Party" loading="lazy"><figcaption><span class="when">JCI · 12/2021</span><h3>New Year Party</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="images/profile/mc-vui-tet-da-nang.jpg" alt="Vui Tết cùng chúng tôi" loading="lazy"><figcaption><span class="when">TP. Đà Nẵng · Xuân Nhâm Dần</span><h3>Vui Tết cùng chúng tôi</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="images/profile/mc-du-bao-hanh-dong-2023.jpg" alt="Dự báo & hành động 2023" loading="lazy"><figcaption><span class="when">Cuối năm 2022</span><h3>Dự báo & hành động 2023</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="gala"><img src="images/profile/mc-ati-gala-2.jpg" alt="The Success Principles – Học viện ATI" loading="lazy"><figcaption><span class="when">Gala</span><h3>The Success Principles – Học viện ATI</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="images/profile/mc-jci-your-dreams.jpg" alt="Dự án Your Dreams 2022" loading="lazy"><figcaption><span class="when">JCI · 2022</span><h3>Dự án Your Dreams 2022</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="images/profile/mc-xuc-tien-hoi-truong.jpg" alt="Xúc tiến thương mại Hà Nội – Đà Nẵng: hội trường" loading="lazy"><figcaption><span class="when">Doanh nghiệp</span><h3>Xúc tiến thương mại Hà Nội – Đà Nẵng: hội trường</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="images/profile/mc-dai-hoi-doan-khoa-iv.jpg" alt="Đại hội khoá IV" loading="lazy"><figcaption><span class="when">Đoàn – Hội</span><h3>Đại hội khoá IV</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="images/profile/mc-doanh-nhan-tre-2.jpg" alt="Doanh nhân trẻ & câu chuyện kết nối" loading="lazy"><figcaption><span class="when">Đà Nẵng · 08/2022</span><h3>Doanh nhân trẻ & câu chuyện kết nối</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="kid"><img src="images/profile/mc-chuong-trinh-thieu-nhi.jpg" alt="Các chương trình dành cho trẻ em" loading="lazy"><figcaption><span class="when">Thiếu nhi</span><h3>Các chương trình dành cho trẻ em</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="images/profile/mc-xung-kich-tinh-nguyen.jpg" alt="Xung kích, tình nguyện" loading="lazy"><figcaption><span class="when">Đoàn – Hội</span><h3>Xung kích, tình nguyện</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="dn"><img src="images/profile/mc-san-khau-do.jpg" alt="Đêm chương trình doanh nghiệp" loading="lazy"><figcaption><span class="when">Doanh nghiệp</span><h3>Đêm chương trình doanh nghiệp</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="images/profile/mc-buc-phat-bieu.jpg" alt="Dẫn chương trình tại bục phát biểu" loading="lazy"><figcaption><span class="when">Sự kiện</span><h3>Dẫn chương trình tại bục phát biểu</h3></figcaption></figure>
+      <figure class="shot reveal" data-cat="tn"><img src="images/profile/mc-san-khau-ngoi-sao.jpg" alt="Chương trình cộng đồng" loading="lazy"><figcaption><span class="when">Sự kiện</span><h3>Chương trình cộng đồng</h3></figcaption></figure>
     </div>
   </div>
 </section>
@@ -393,16 +416,12 @@
 <!-- ===================== CHƯƠNG TRÌNH KHÁC ===================== -->
 <section class="section">
   <div class="container">
-    <h2 class="section-title reveal">Và nhiều chương trình khác</h2>
+    <h2 class="section-title reveal">Diễn giả & khách mời đã đồng hành</h2>
     <ul class="other-list reveal" style="margin-top:28px">
       <li><div>Toạ đàm “Hành trang Marketer 4.0 & kinh nghiệm phát triển nghề nghiệp”<small>Trường Đại học Đông Á · 27/04/2021</small></div></li>
-      <li><div>New Year Party – JCI<small>12/2021</small></div></li>
-      <li><div>Dự báo & hành động 2023</div></li>
-      <li><div>Family Night – Stronger Together<small>13/10/2022</small></div></li>
-      <li><div>Ngày hội tư vấn – giới thiệu việc làm & định hướng khởi nghiệp, lập nghiệp<small>TP. Đà Nẵng</small></div></li>
-      <li><div>Đại hội VII nhiệm kỳ 2022 – 2025</div></li>
-      <li><div>Hội thảo về tư duy lãnh đạo</div></li>
-      <li><div>Hoạt động Đoàn: Đại hội khoá IV, xung kích tình nguyện</div></li>
+      <li><div>Talkshow “Xây dựng thương hiệu cá nhân”<small>Diễn giả Nguyễn Ngọc Long</small></div></li>
+      <li><div>Hội thảo “Tư duy lãnh đạo trong vận hành chiến lược”<small>28/10/2022 · diễn giả Lê Phụng Hào</small></div></li>
+      <li><div>Xúc tiến thương mại Doanh nghiệp Hà Nội – Đà Nẵng<small>Shark Phạm Thanh Hưng & Shark Nguyễn Xuân Phú</small></div></li>
     </ul>
   </div>
 </section>
@@ -476,6 +495,12 @@
   });
   lb.onclick=()=>lb.classList.remove('open');
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');modal.classList.remove('open')}});
+  // Lọc thư viện ảnh
+  document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{
+    document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===c));
+    const f=c.dataset.f;
+    document.querySelectorAll('.shot').forEach(s=>{s.hidden=!(f==='all'||s.dataset.cat===f);if(!s.hidden)s.classList.add('in')});
+  });
   // Sao chép liên hệ
   document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=async()=>{
     const el=document.getElementById(b.dataset.copy), label=b.textContent;
