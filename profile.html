@@ -270,6 +270,16 @@
   @media (max-width:860px){.p-hero .container,.feature{grid-template-columns:1fr}.contact-card{grid-template-columns:1fr}}
   @media (max-width:560px){.fields{grid-template-columns:1fr 1fr}}
 
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0 0 40px}
+  .stats div{background:#fff;border:1px solid #eadfd5;border-radius:16px;padding:18px;text-align:center}
+  .stats b{display:block;font-family:"Playfair Display",serif;font-size:28px;color:var(--primary)}
+  .stats span{font-size:14px;color:var(--muted)}
+  .timeline{list-style:none;max-width:780px;margin:0 auto;border-left:3px solid #eadfd5;padding-left:28px;display:grid;gap:22px}
+  .timeline li{position:relative}
+  .timeline li::before{content:"";position:absolute;left:-37px;top:4px;width:15px;height:15px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 4px #f6e3df}
+  .timeline b{font-size:18px;color:var(--primary)}
+  .timeline p{color:var(--muted);margin-top:4px}
+  @media (max-width:700px){.stats{grid-template-columns:1fr 1fr}}
   /* ====== RESPONSIVE ====== */
   @media (max-width:1024px){
     .benefits{grid-template-columns:repeat(2,1fr)}
@@ -342,6 +352,27 @@
       <img src="images/profile/chan-dung-studio.jpg" alt="Chân dung MC Ngọc Hương" class="hero-img">
       <div class="badge"><i>🎙️</i><div><b>MC sự kiện</b><br>Đà Nẵng & miền Trung</div></div>
     </div>
+  </div>
+</section>
+
+<!-- ===================== HÀNH TRÌNH ===================== -->
+<section class="section" id="hanh-trinh">
+  <div class="container">
+    <h2 class="section-title reveal">Hành trình cầm micro</h2>
+    <p class="section-sub reveal">Từ MC tiệc cưới năm lớp 11 đến sân khấu đại hội, hội thảo doanh nghiệp tại Đà Nẵng.</p>
+    <div class="stats reveal">
+      <div><b>Từ lớp 11</b><span>bắt đầu dẫn chương trình</span></div>
+      <div><b>~10 năm</b><span>đồng hành cùng học bổng SEEDS</span></div>
+      <div><b>4 mùa</b><span>diễn giả Camp Connect liên tiếp</span></div>
+      <div><b>4,8K</b><span>người theo dõi trên Facebook</span></div>
+    </div>
+    <ol class="timeline">
+      <li class="reveal"><b>Những ngày đầu</b><p>Dẫn tiệc cưới từ năm lớp 11. Lần đầu làm MC cho các doanh nhân, vấp tên đại biểu và run trước cả trăm người, rồi luyện tập để vững vàng hơn sau mỗi chương trình.</p></li>
+      <li class="reveal"><b>Học bổng SEEDS – Pacific Links Foundation</b><p>Nhận học bổng từ năm lớp 9 và gắn bó gần 10 năm: tình nguyện viên, Trưởng ban hoạt động xã hội, rồi trở thành diễn giả cho các thế hệ sau.</p></li>
+      <li class="reveal"><b>Đoàn – Hội & cộng đồng doanh nhân</b><p>Tham gia Đoàn trường ĐH Ngoại ngữ – ĐH Đà Nẵng, JCI Danang (Tình nguyện viên xuất sắc) và Hội Doanh nhân trẻ TP. Đà Nẵng.</p></li>
+      <li class="reveal"><b>Sân khấu lớn & đối tác quốc tế</b><p>Hội thảo Shark Tank mùa 6, Forum “Opportunities for Vietnamese businesses” (Việt Nam – Hoa Kỳ), Xúc tiến thương mại Hà Nội – Đà Nẵng, Vietnam ICT Trade Mission với Hàn Quốc, Vietnam – Korea Partnership Week.</p></li>
+      <li class="reveal"><b>2026</b><p>MC Đại hội lần thứ III Chi hội Vận chuyển du lịch Đà Nẵng, New Year Party Mừng xuân Bính Ngọ, Gặp mặt Doanh nghiệp Nhật Bản – Xuân 2026; diễn giả “Personal Branding In Real Life” tại Danang Camp Connect; mở lớp luyện giọng nói.</p></li>
+    </ol>
   </div>
 </section>
 
@@ -444,6 +475,9 @@
   <div class="container">
     <h2 class="section-title reveal">Diễn giả & khách mời đã đồng hành</h2>
     <ul class="other-list reveal" style="margin-top:28px">
+      <li><div>Hội thảo Shark Tank mùa 6</div></li>
+      <li><div>Forum “Opportunities for Vietnamese businesses”<small>Việt Nam – Hoa Kỳ</small></div></li>
+      <li><div>Vietnam ICT Trade Mission & Vietnam – Korea Partnership Week<small>Làm việc cùng đối tác Hàn Quốc</small></div></li>
       <li><div>Toạ đàm “Hành trang Marketer 4.0 & kinh nghiệm phát triển nghề nghiệp”<small>Trường Đại học Đông Á · 27/04/2021</small></div></li>
       <li><div>Talkshow “Xây dựng thương hiệu cá nhân”<small>Diễn giả Nguyễn Ngọc Long</small></div></li>
       <li><div>Hội thảo “Tư duy lãnh đạo trong vận hành chiến lược”<small>28/10/2022 · diễn giả Lê Phụng Hào</small></div></li>
